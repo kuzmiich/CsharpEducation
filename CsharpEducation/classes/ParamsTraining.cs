@@ -1,20 +1,19 @@
-﻿using ConsoleApp1.interfaces;
+﻿using Education.interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ConsoleApp1.classes
+namespace Education.classes
 {
     class ParamsTraining : ITask
     {
         
         public static void OutTask()
         {
-            Console.WriteLine(Addition(1, 2, 3, 4, 5));
+            Console.WriteLine("Работа с params!");
+            Addition(1, 2, 3, 4, 5);
 
-            Console.WriteLine(Addition(new int[] { 1, 2, 3, 4 }));
+            Addition(new int[] { 1, 2, 3, 4 });
 
-            Console.WriteLine(Addition());
+            Addition();
         }
         private static int Addition(params int[] integers)
         {

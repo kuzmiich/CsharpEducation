@@ -1,7 +1,7 @@
-﻿using ConsoleApp1.interfaces;
+﻿using Education.interfaces;
 using System;
 
-namespace ConsoleApp1.classes
+namespace Education.classes
 {
     struct User
     {
@@ -22,7 +22,7 @@ namespace ConsoleApp1.classes
         public People(string name, int age, string gender)
         {
             this.name = name;
-            if (age < 0 || age > 120)
+            if (age > 0 || age < 120)
             {
                 this.age = age;
             } else { throw new Exception("Error, incorrect data.Transfer number from 0 to 120"); }
@@ -44,6 +44,7 @@ namespace ConsoleApp1.classes
     {
         public static void OutTask()
         {
+            Console.WriteLine("Работа со структурами");
             User user = new User();
             user.DisplayInfo();
             //
@@ -59,8 +60,6 @@ namespace ConsoleApp1.classes
             People.HiPeople(name);
 
             people.DisplayInfo();
-
-            Console.Read();
         }
     }
 }

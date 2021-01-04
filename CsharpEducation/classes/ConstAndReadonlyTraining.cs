@@ -1,0 +1,31 @@
+﻿using Education.interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Education.classes
+{
+    readonly struct Math
+    {
+        //public readonly int operation = 5; не работает
+        public readonly int operation;
+        public string A { get; }
+        public Math(string a, int b)
+        {
+            this.A = a;
+            this.operation = b;
+        }
+    }
+    class ConstAndReadonlyTraining : ITask
+    {
+        public static void OutTask()
+        {
+            const int a = 5;
+            // readonly int b = 1; не работает
+            Console.WriteLine("Изучил отличия константы времени выполнения(const) от константы времени компиляции(readonly)");
+            Console.WriteLine("константа readonly может быть изменена только в конструкторе");
+        }
+    }
+}

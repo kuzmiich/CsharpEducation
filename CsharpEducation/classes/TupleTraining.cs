@@ -1,8 +1,8 @@
-﻿using ConsoleApp1.interfaces;
+﻿using Education.interfaces;
 using System;
 using System.Linq;
 
-namespace ConsoleApp1.classes
+namespace Education.classes
 {
     /// <summary>
     /// 
@@ -11,6 +11,7 @@ namespace ConsoleApp1.classes
     {
         public static void OutTask()
         {
+            Console.WriteLine("Работа с tuple");
             var tuple1 = (5, 10);
             Console.WriteLine(tuple1.Item1); // 5
             Console.WriteLine(tuple1.Item2); // 10
@@ -30,8 +31,6 @@ namespace ConsoleApp1.classes
             var tuple4 = GetNamedValues(new int[]{ 1,2,3,4,5,6,7});
             Console.WriteLine(tuple4.count);
             Console.WriteLine(tuple4.sum);
-
-            Console.Read();
         }
         private static (int, int) GetValues()
         {
