@@ -6,6 +6,6 @@ namespace Education.interfaces
 {
     interface ITask
     {
-        public void OutTask() { Console.WriteLine("Hello world!"); }
+        public static void OutTask() { Console.WriteLine("Hello world!"); }
     }
 }

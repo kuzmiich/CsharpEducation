@@ -30,16 +30,19 @@ namespace Education
             // !end
             Console.WriteLine(LINE);
 
+            IndexerTraining.OutTask();
+            Console.WriteLine(LINE);
+
             AccessModifiers.OutTask();
             Console.WriteLine(LINE);
 
             ConstAndReadonlyTraining.OutTask();
             Console.WriteLine(LINE);
 
-            ConstAndReadonlyTraining.OutTask();
+            NullTraining.OutTask();
             Console.WriteLine(LINE);
 
-            NullTraining.OutTask();
+            TypeConversionTraining.OutTask();
             Console.WriteLine(LINE);
         }
     }

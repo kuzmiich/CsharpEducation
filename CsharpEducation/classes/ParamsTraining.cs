@@ -5,7 +5,6 @@ namespace Education.classes
 {
     class ParamsTraining : ITask
     {
-        
         public static void OutTask()
         {
             Console.WriteLine("Работа с params!");
