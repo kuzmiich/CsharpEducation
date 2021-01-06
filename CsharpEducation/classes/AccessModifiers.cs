@@ -13,7 +13,6 @@ namespace Education.classes
             Console.WriteLine("Поля и методы по умолчанию имеют доступ private и их нельзя переопределить");
             Console.WriteLine("Во вложенных классах можно использовать 4 основных модификатора доступа");
             Console.WriteLine("Модификатор для блока set или get можно установить, если свойство имеет оба блока");
-            Console.WriteLine("");
         }
     }
     public class Test1

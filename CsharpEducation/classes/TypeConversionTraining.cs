@@ -15,6 +15,7 @@ namespace Education.classes
             Console.WriteLine("Изучил что такое приведение вниз, приведение вверх!");
             Console.WriteLine("Изучил ключевые слова as, is и как они работают!");
             Console.WriteLine("Работа с implicit|explicit! Работает только со статичными методами.");
+            Console.WriteLine("Ключевое слово new может скрывать реализацию базового класса.");
 
             // простое приведение
             Person person1 = new Person("Олег");
@@ -32,6 +33,7 @@ namespace Education.classes
             Client cl = new Client("Вова", "Epam");
             Person person2 = cl;
             Client client1 = (Client)person2;
+            
             // Ключевое слово as - С помощью него программа пытается преобразовать выражение к определенному типу, при этом не выбрасывает исключение.
             // В случае неудачного преобразования выражение будет содержать значение null
             Person p = new Person("Tom");
@@ -57,7 +59,7 @@ namespace Education.classes
             }*/
             // is - проверке допустимости преобразования с помощью ключевого слова
             Person person3 = new Person("Tom");
-            if (person is Employee)
+            if (person3 is Employee)
             {
                 Employee employee2 = (Employee)person3;
                 Console.WriteLine(employee2.Company);
@@ -84,7 +86,7 @@ namespace Education.classes
     {
         public int Seconds { get; set; }
         public Counter() {}
-        // неявное преобразование
+        // неявное преобразование 
         public static implicit operator Counter(int x)
         {
             return new Counter { Seconds = x };

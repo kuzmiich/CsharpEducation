@@ -44,6 +44,9 @@ namespace Education
 
             TypeConversionTraining.OutTask();
             Console.WriteLine(LINE);
+
+            ObjectTraining.OutTask();
+            Console.WriteLine(LINE);
         }
     }
 }
