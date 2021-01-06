@@ -22,19 +22,36 @@ namespace Education.classes
             obj.GetHashCode();
             object.Equals(obj1, obj2);
             object.ReferenceEquals(obj1, obj2);
-            // поля
-            Test test = new Test();
-
-            foreach (var memb in test.GetType().GetFields())
+            // скрытые поля
+            var length = obj.GetType().GetFields().Length;
+            foreach (var field in obj.GetType().GetFields())
             {
-                Console.WriteLine(memb.Name);
-            }
-        }
-        class Test
-        {
-            public Test()
-            {
-
+                Console.WriteLine(field.Name); // 1
+                Console.WriteLine(field.IsStatic); // 2
+                Console.WriteLine(field.IsPublic); // 3
+                Console.WriteLine(field.IsFamily); // 4
+                Console.WriteLine(field.IsPrivate); // 5
+                Console.WriteLine(field.IsAssembly); // 6
+                Console.WriteLine(field.IsLiteral); // 7
+                Console.WriteLine(field.IsInitOnly); // 8
+                Console.WriteLine(field.FieldType); // 9
+                Console.WriteLine(field.Attributes); // 10
+                Console.WriteLine(field.CustomAttributes); // 11
+                Console.WriteLine(field.DeclaringType); // 12 
+                Console.WriteLine(field.IsCollectible); // 13
+                Console.WriteLine(field.IsPinvokeImpl); // 14
+                Console.WriteLine(field.IsSecurityCritical); // 15
+                Console.WriteLine(field.IsSecuritySafeCritical); // 16
+                Console.WriteLine(field.IsSpecialName); // 17
+                Console.WriteLine(field.IsSecurityTransparent); // 18
+                Console.WriteLine(field.IsFamilyAndAssembly); // 19
+                Console.WriteLine(field.IsFamilyOrAssembly); // 20
+                Console.WriteLine(field.FieldHandle); // 21
+                Console.WriteLine(field.IsNotSerialized); // 22
+                Console.WriteLine(field.MetadataToken); // 23
+                Console.WriteLine(field.Module); // 24
+                Console.WriteLine(field.MemberType); // 25
+                Console.WriteLine(field.ReflectedType); // 26
             }
         }
     }

@@ -2,7 +2,7 @@
 {
     public static class Sorting
     {
-        private static void Swap<T>(ref T value1, ref T value2)
+        public static void Swap<T>(ref T value1, ref T value2)
         {
             T temp = value1;
             value1 = value2;

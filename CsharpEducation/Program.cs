@@ -24,6 +24,7 @@ namespace Education
             StructTraining.OutTask();
 
             // check class library
+            Console.WriteLine("Работа с ClassLibrary(Некоторые методы используются в обобщениях)");
             LibPeople people;
             int[] arr = new int[] { 1, 2, 3, 4, 5, 6 };
             ClassLibrary.Sorting.BubleSort(ref arr);
@@ -46,6 +47,9 @@ namespace Education
             Console.WriteLine(LINE);
 
             ObjectTraining.OutTask();
+            Console.WriteLine(LINE);
+
+            GeneralizationTraining.OutTask();
             Console.WriteLine(LINE);
         }
     }
