@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using x = System.Reflection.BindingFlags;
+using y = System.Reflection.FieldAttributes;
 namespace Education.classes
 {
     class ObjectTraining : ITask
@@ -23,7 +24,61 @@ namespace Education.classes
             object.Equals(obj1, obj2);
             object.ReferenceEquals(obj1, obj2);
             // скрытые поля
-            var length = obj.GetType().GetFields().Length;
+
+            /*var arrBindings = new List<x>//21
+            {
+                
+            }; */
+            /*Console.WriteLine(obj.GetType().GetFields(
+                y.PrivateScope |
+                y.Private |
+                y.FamANDAssem |
+                y.Assembly |
+                y.Family |
+                y.FamORAssem |
+                y.Public |
+                y.FieldAccessMask |
+                y.Static |
+                y.InitOnly | 
+                y.Literal | 
+                y.NotSerialized |
+                y.HasFieldRVA |
+                y.SpecialName |
+                y.RTSpecialName |
+                y.HasFieldMarshal |
+                y.PinvokeImpl |
+                y.HasDefault).Length);*/
+            Console.WriteLine(obj.GetType().GetFields().Length);
+            Console.WriteLine(obj.GetType().GetMembers().Length);
+            var a = obj.GetType().GetProperties(
+                x.Default |
+                x.IgnoreCase |
+                x.DeclaredOnly |
+                x.Instance |
+                x.Static |
+                x.Public |
+                x.NonPublic |
+                x.FlattenHierarchy |
+                x.InvokeMethod |
+                x.CreateInstance |
+                x.GetField |
+                x.SetField |
+                x.GetProperty |
+                x.SetProperty |
+                x.PutDispProperty |
+                x.PutRefDispProperty |
+                x.ExactBinding |
+                x.SuppressChangeType |
+                x.OptionalParamBinding |
+                x.IgnoreReturn |
+                x.DoNotWrapExceptions);
+            Console.WriteLine(a.Length);
+            foreach (var el in a)
+            {
+                Console.WriteLine(el);
+            }
+            
+            var length = obj.GetType().GetFields(x.Public).Length;
             foreach (var field in obj.GetType().GetFields())
             {
                 Console.WriteLine(field.Name); // 1
