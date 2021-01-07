@@ -1,6 +1,5 @@
 using Education.classes;
 using System;
-using System.Linq;
 using LibPeople = ClassLibrary.People;
 
 namespace Education

@@ -1,11 +1,8 @@
 ﻿using Education.interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using x = System.Reflection.BindingFlags;
 using y = System.Reflection.FieldAttributes;
+
 namespace Education.classes
 {
     class ObjectTraining : ITask

@@ -1,5 +1,6 @@
 ﻿using Education.interfaces;
 using System;
+
 namespace Education.classes
 {
     class ExceptionTraining : ITask
