@@ -51,6 +51,9 @@ namespace Education
 
             GeneralizationTraining.OutTask();
             Console.WriteLine(LINE);
+
+            ExceptionTraining.OutTask();
+            Console.WriteLine(LINE);
         }
     }
 }
