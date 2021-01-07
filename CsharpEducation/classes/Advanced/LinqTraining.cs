@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Education.classes
+namespace Education.classes.Advanced
 {
     class LinqTraining : ITask
     {

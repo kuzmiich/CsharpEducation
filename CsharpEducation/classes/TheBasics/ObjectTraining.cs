@@ -3,7 +3,7 @@ using System;
 using x = System.Reflection.BindingFlags;
 using y = System.Reflection.FieldAttributes;
 
-namespace Education.classes
+namespace Education.classes.TheBasics
 {
     class ObjectTraining : ITask
     {

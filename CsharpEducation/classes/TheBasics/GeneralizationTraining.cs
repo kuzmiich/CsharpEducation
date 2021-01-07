@@ -2,7 +2,7 @@
 using System;
 using static ClassLibrary.Sorting;
 
-namespace Education.classes
+namespace Education.classes.TheBasics
 {
     class GeneralizationTraining : ITask
     {

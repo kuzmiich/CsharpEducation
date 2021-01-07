@@ -1,4 +1,5 @@
-using Education.classes;
+using Education.classes.TheBasics;
+using Education.classes.Advanced;
 using System;
 using LibPeople = ClassLibrary.People;
 
@@ -52,6 +53,9 @@ namespace Education
             Console.WriteLine(LINE);
 
             ExceptionTraining.OutTask();
+            Console.WriteLine(LINE);
+
+            DelegateTraining.OutTask();
             Console.WriteLine(LINE);
         }
     }

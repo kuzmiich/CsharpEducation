@@ -1,7 +1,7 @@
 ﻿using Education.interfaces;
 using System;
 
-namespace Education.classes
+namespace Education.classes.TheBasics
 {
     class Matrix
     {
