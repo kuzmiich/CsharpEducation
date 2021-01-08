@@ -1,14 +1,14 @@
 ﻿using Education.interfaces;
 using System;
 
-namespace Education.classes.TheBasics
+namespace Education.classes.Basics
 {
-    readonly struct Math
+    readonly struct @Math
     {
         //public readonly int operation = 5; не работает
         public readonly int operation;
         public string A { get; }
-        public Math(string a, int b)
+        public @Math(string a, int b)
         {
             this.A = a;
             this.operation = b;

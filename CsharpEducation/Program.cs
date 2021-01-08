@@ -1,4 +1,4 @@
-using Education.classes.TheBasics;
+using Education.classes.Basics;
 using Education.classes.Advanced;
 using System;
 using LibPeople = ClassLibrary.People;

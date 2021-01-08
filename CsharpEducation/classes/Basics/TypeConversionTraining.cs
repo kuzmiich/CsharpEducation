@@ -1,7 +1,7 @@
 ﻿using Education.interfaces;
 using System;
 
-namespace Education.classes.TheBasics
+namespace Education.classes.Basics
 {
     class TypeConversionTraining : ITask
     {

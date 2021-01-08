@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace Education.classes.TheBasics
+namespace Education.classes.Basics
 {
     /// <summary>
     /// 
