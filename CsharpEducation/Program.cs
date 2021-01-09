@@ -57,6 +57,9 @@ namespace Education
 
             DelegateTraining.OutTask();
             Console.WriteLine(LINE);
+
+            DelegateUse.OutTask();
+            Console.WriteLine(LINE);
         }
     }
 }
