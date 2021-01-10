@@ -24,6 +24,7 @@ namespace Education.classes.Basics
             //
             account.UnregisterHandler(colorDelegate);
             account.Withdraw(50);
+            ShowMessage($"Сумма на счете = {account._bank}");
         }
         private static void ShowMessage(string message)
         {
