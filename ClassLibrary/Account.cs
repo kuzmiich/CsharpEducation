@@ -2,16 +2,15 @@
 {
     public class Account
     {
-        // Объявляем делегат
         public delegate void AccountStateHandler(string message);
-        // Создаем переменную делегата
-        AccountStateHandler _accountStateHandler;
+        AccountStateHandler _accountStateHandler { get; set; }
 
-        public int _bank { get; private set; } // Переменная для хранения суммы на счете
+        public uint _bank { get; private set; } // Переменная для хранения суммы на счете
 
-        public Account(int bank)
+        public Account(uint bank)
         {
             _bank = bank;
+            this.RegisterHandler(_accountStateHandler);
         }
         // Регистрируем делегат
         public void RegisterHandler(AccountStateHandler accountStateHandler)
@@ -23,16 +22,19 @@
         {
             _accountStateHandler -= accountStateHandler; // удаляем делегат
         }
-
-        public void Withdraw(int sum)
+        public void PutMoney(uint money)
         {
-            if (sum <= _bank)
+            _bank += money;
+        }
+        public void TakeMoney(uint money)
+        {
+            if (money <= _bank)
             {
-                _bank -= sum;
+                _bank -= money;
 
                 if (_accountStateHandler != null)
                 {
-                    _accountStateHandler($"Сумма {sum} снята со счета");
+                    _accountStateHandler($"Сумма {money} снята со счета");
                 }
             }
             else if(_accountStateHandler != null)

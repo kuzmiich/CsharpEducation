@@ -16,14 +16,14 @@ namespace Education.classes.Basics
             Account.AccountStateHandler colorDelegate = 
                 new Account.AccountStateHandler(ColorMessage);
             account.RegisterHandler(colorDelegate);
-            account.Withdraw(100);
+            account.TakeMoney(100);
             ShowMessage($"Сумма на счете = {account._bank}");
-            account.Withdraw(300);
+            account.TakeMoney(300);
             ShowMessage($"Сумма на счете = {account._bank}");
-            account.Withdraw(700);
+            account.TakeMoney(700);
             //
             account.UnregisterHandler(colorDelegate);
-            account.Withdraw(50);
+            account.TakeMoney(50);
             ShowMessage($"Сумма на счете = {account._bank}");
         }
         private static void ShowMessage(string message)
