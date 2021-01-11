@@ -60,6 +60,12 @@ namespace Education
 
             DelegateUse.OutTask();
             Console.WriteLine(LINE);
+
+            DelegateAnonymousTraining.OutTask();
+            Console.WriteLine(LINE);
+
+            DelegateEventTraining.OutTask();
+            Console.WriteLine(LINE);
         }
     }
 }

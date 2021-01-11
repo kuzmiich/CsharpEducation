@@ -2,6 +2,6 @@
 {
     interface ITask
     {
-        public static void OutTask() { System.Console.WriteLine("Hello world!"); }
+        static void OutTask() { System.Console.WriteLine("Hello world!"); }
     }
 }
