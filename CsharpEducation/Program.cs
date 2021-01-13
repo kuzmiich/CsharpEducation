@@ -1,6 +1,7 @@
+using System;
+using Education.classes;
 using Education.classes.Basics;
 using Education.classes.Advanced;
-using System;
 using LibPeople = ClassLibrary.People;
 
 namespace Education
@@ -65,6 +66,9 @@ namespace Education
             Console.WriteLine(LINE);
 
             DelegateEventTraining.OutTask();
+            Console.WriteLine(LINE);
+
+            SolidPrinciples.OutSolidPrinceples();
             Console.WriteLine(LINE);
         }
     }
