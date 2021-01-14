@@ -36,7 +36,9 @@ namespace Education.classes.Basics
             ShowMessage($"Сумма на счете = {account._bank}");
             account.TakeMoney(200);
             ShowMessage($"Сумма на счете = {account._bank}");
+
             // удаление и добавление событий через методы внутри класса
+            
 
         }
 
