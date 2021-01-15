@@ -12,7 +12,8 @@ namespace Education.classes.Basics
             Console.WriteLine("_Событие не может свойством!_");
             Console.WriteLine("При вызове события будет вызываться последнее событие в списке вызовов, как и с делегатами");
             Console.WriteLine("Добавление анонимных методов");
-            Console.WriteLine("Реализация добавления и удаления методов внутри класса");
+            Console.WriteLine("Реализация добавления и удаления событий внутри класса");
+            Console.WriteLine("В event мождо добавлять делегат, метод и лямбда-функцию");
             Account2 account = new Account2(1000);
             account.Notify += ShowMessage;
             account.TakeMoney(100);
@@ -35,11 +36,18 @@ namespace Education.classes.Basics
             account.PutMoney(100);
             ShowMessage($"Сумма на счете = {account._bank}");
             account.TakeMoney(200);
-            ShowMessage($"Сумма на счете = {account._bank}");
+            ShowMessage($"Сумма на счете = {account._bank}\n");
 
             // удаление и добавление событий через методы внутри класса
-            
+            Account2 account2 = new Account2(100);
+            account2.Notify += ShowMessage;
+            account2.PutMoney(20);
+            ShowMessage($"Сумма на счете = {account2._bank}");
+            account2.Notify -= ShowMessage;
+            account2.PutMoney(20);
+            ShowMessage($"Сумма на счете = {account2._bank}\n");
 
+            //
         }
 
         private static void ShowMessage(string value)

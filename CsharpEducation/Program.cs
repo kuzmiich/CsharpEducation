@@ -2,7 +2,7 @@ using System;
 using Education.classes;
 using Education.classes.Basics;
 using Education.classes.Advanced;
-using LibPeople = ClassLibrary.People;
+using LibPeople = ClassLibrary.Person;
 
 namespace Education
 {
@@ -10,12 +10,7 @@ namespace Education
     {
         static void Main(string[] args)
         {
-            int length = 50;
-            char[] LINE = new char[length];
-            for (int i = 0; i < length; i++)
-            {
-                LINE[i] = '*';
-            }
+            char[] LINE = GetLine('*');
             Console.WriteLine(LINE);
             ParamsTraining.OutTask();
 
@@ -70,6 +65,22 @@ namespace Education
 
             SolidPrinciples.OutSolidPrinceples();
             Console.WriteLine(LINE);
+
+            Console.WriteLine();
+            bool a = true;
+            bool b = true;
+            bool c = a ^ b;
+            Console.WriteLine(c);
+        }
+        static char[] GetLine(char separator)
+        {
+            int length = 50;
+            char[] line = new char[length];
+            for (int i = 0; i < length; i++)
+            {
+                line[i] = separator;
+            }
+            return line;
         }
     }
 }
