@@ -14,7 +14,10 @@ namespace Education.classes.Basics
             Console.WriteLine("Добавление анонимных методов");
             Console.WriteLine("Реализация добавления и удаления событий внутри класса");
             Console.WriteLine("В event мождо добавлять делегат, метод и лямбда-функцию");
+            Console.WriteLine("Можно описывать делегат с использованием своего класса и передавать его 2 параметром");
+            Console.WriteLine("Для событий можно моксимально компактно описать методы, а также расширять класс для передачи в делегат");
             Account2 account = new Account2(1000);
+
             account.Notify += ShowMessage;
             account.TakeMoney(100);
             ShowMessage($"Сумма на счете = {account._bank}");
