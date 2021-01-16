@@ -95,7 +95,7 @@ namespace ClassLibrary
     public class Account3
     {
         public delegate void AccountHandler(object sender, AccountEventArgs e);
-        private event AccountHandler Notify;
+        public event AccountHandler Notify;
 
         public uint _bank { get; private set; } // Переменная для хранения суммы на счете
 

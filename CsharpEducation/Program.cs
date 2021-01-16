@@ -20,7 +20,7 @@ namespace Education
             StructTraining.OutTask();
 
             // check class library
-            Console.WriteLine("Работа с ClassLibrary(Некоторые методы используются в обобщениях)");
+            Console.WriteLine("Работа с ClassLibrary(Некоторые методы используются с обобщениями)");
             LibPeople people;
             int[] arr = new int[] { 1, 2, 3, 4, 5, 6 };
 

@@ -47,9 +47,18 @@ namespace Education.classes.Basics
             account2.PutMoney(20);
             ShowMessage($"Сумма на счете = {account2._bank}\n");
 
-            //
+            // добавление класса в делегат, не нужно добавлять обработчик на добавление и удаление события
+            Account3 account3 = new Account3(100);
+            account3.Notify += ShowMessage;
+            account3.PutMoney(20);
+            account3.TakeMoney(40);
+            account3.TakeMoney(5);
         }
-
+        private static void ShowMessage(object sender, AccountEventArgs e)
+        {
+            Console.WriteLine($"Сумма транзакций:{e.Bank}");
+            Console.WriteLine(e.Message);
+        }
         private static void ShowMessage(string value)
         {
             Console.WriteLine(value);
