@@ -18,5 +18,8 @@ namespace Education.classes.Advanced
                 Console.WriteLine(el.Second);
             }
         }
+        public static bool CheckArraySequence<T>(T[] arrFirst, T[] arrSecond) => arrFirst.SequenceEqual(arrSecond);
+        public static T[] Sort<T>(params T[] arr) => (arr.OrderBy(x => x)).ToArray<T>();
+        public static bool Search<T>(T index, params T[] arr) => (arr.Any(x => object.Equals(x, index)));
     }
 }

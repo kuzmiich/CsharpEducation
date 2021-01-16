@@ -46,10 +46,10 @@ namespace Education.classes.Basics
             Target = target;
         }
     }
-    class Dictionary
+    class Translator
     {
         private Word[] words;
-        public Dictionary()
+        public Translator()
         {
             words = new Word[]
             {
@@ -112,7 +112,7 @@ namespace Education.classes.Basics
             inter[0] = new Player { Name = "Ronaldo", Number = 9 };
             Console.WriteLine($"{inter[0].Name} - {inter[0].Number}");
             //
-            Dictionary dict = new Dictionary();
+            Translator dict = new Translator();
             string needWord = "blue";
             Console.WriteLine(dict[needWord]);
             dict[needWord] = "голубой";

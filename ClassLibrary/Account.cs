@@ -51,7 +51,7 @@ namespace ClassLibrary
     }
     public class Account2
     {
-        public delegate void AccountHandler(string message); 
+        public delegate void AccountHandler(string message);
         private event AccountHandler _notify;
         public event AccountHandler Notify
         {
@@ -66,7 +66,6 @@ namespace ClassLibrary
                 Console.WriteLine($"{value.Method.Name} удален");
             }
         }
-
         public uint _bank { get; private set; } // Переменная для хранения суммы на счете
 
         public Account2(uint bank)
@@ -77,7 +76,7 @@ namespace ClassLibrary
         {
             _bank += money;
 
-            _notify?.Invoke($"Сумма {money} добавлена на счет");
+            _notify?.Invoke($"На счет поступило {_bank}");
         }
         public void TakeMoney(uint money)
         {
@@ -93,14 +92,43 @@ namespace ClassLibrary
             }
         }
     }
-    class AccountEventArgs
+    public class Account3
     {
-        // Сообщение
-        public string Message { get; }
-        // Сумма, на которую изменился счет
-        public int Bank { get; }
+        public delegate void AccountHandler(object sender, AccountEventArgs e);
+        private event AccountHandler Notify;
 
-        public AccountEventArgs(string mes, int money)
+        public uint _bank { get; private set; } // Переменная для хранения суммы на счете
+
+        public Account3(uint bank)
+        {
+            _bank = bank;
+        }
+        public void PutMoney(uint money)
+        {
+            _bank += money;
+
+            Notify?.Invoke(this, new AccountEventArgs($"На счет поступило {_bank}", _bank));
+        }
+        public void TakeMoney(uint money)
+        {
+            if (money <= _bank)
+            {
+                _bank -= money;
+
+                Notify?.Invoke(this, new AccountEventArgs($"Сумма {money} снята со счета", money));
+            }
+            else
+            {
+                Notify?.Invoke(this, new AccountEventArgs($"Недостаточно денег на счете.Текущий баланс {_bank}", money));
+            }
+        }
+    }
+    public class AccountEventArgs
+    {
+        public string Message { get; }
+        public uint Bank { get; }
+
+        public AccountEventArgs(string mes, uint money)
         {
             Message = mes;
             Bank = money;

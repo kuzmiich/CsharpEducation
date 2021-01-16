@@ -10,7 +10,7 @@ namespace Education
     {
         static void Main(string[] args)
         {
-            char[] LINE = GetLine('*');
+            char[] LINE = GetLine(50, '*');
             Console.WriteLine(LINE);
             ParamsTraining.OutTask();
 
@@ -23,6 +23,7 @@ namespace Education
             Console.WriteLine("Работа с ClassLibrary(Некоторые методы используются в обобщениях)");
             LibPeople people;
             int[] arr = new int[] { 1, 2, 3, 4, 5, 6 };
+
             ClassLibrary.Sorting.BubleSort(ref arr);
             // !end
             Console.WriteLine(LINE);
@@ -65,16 +66,10 @@ namespace Education
 
             SolidPrinciples.OutSolidPrinceples();
             Console.WriteLine(LINE);
-
-            Console.WriteLine();
-            bool a = true;
-            bool b = true;
-            bool c = a ^ b;
-            Console.WriteLine(c);
+            
         }
-        static char[] GetLine(char separator)
+        static char[] GetLine(int length, char separator)
         {
-            int length = 50;
             char[] line = new char[length];
             for (int i = 0; i < length; i++)
             {
