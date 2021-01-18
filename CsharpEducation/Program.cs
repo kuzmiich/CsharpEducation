@@ -63,10 +63,13 @@ namespace Education
 
             DelegateEventTraining.OutTask();
             Console.WriteLine(LINE);
+            
+            DelegateCovarianceContravarianceTraining.OutTask();
+            Console.WriteLine(LINE);
+
 
             SolidPrinciples.OutSolidPrinceples();
             Console.WriteLine(LINE);
-            
         }
         static char[] GetLine(int length, char separator)
         {
