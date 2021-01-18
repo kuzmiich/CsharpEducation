@@ -37,7 +37,7 @@ namespace ClassLibrary
         /// Get information fields
         /// </summary>
         /// <returns>string</returns>
-        public string getInfo()
+        public override string ToString()
         {
             return $"Name = { FIO }, Gender = { Gender }, Age = { Age }";
         }
