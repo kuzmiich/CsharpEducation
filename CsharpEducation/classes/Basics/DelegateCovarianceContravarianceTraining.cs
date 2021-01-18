@@ -3,18 +3,18 @@ using System;
 
 namespace Education.classes.Basics
 {
-    class Test
+    class UnitTest
     {
         public string Number { get; set; }
         public string Condition { get; set; }
 
-        public Test(string number, string condition)
+        public UnitTest(string number, string condition)
         {
             Number = number;
             Condition = condition;
         }
     }
-    class TestClass : Test
+    class TestClass : UnitTest
     {
         public string Answer { get; private set; }
         public TestClass(string number, string condition, string answer) : base(number, condition)
@@ -33,7 +33,7 @@ namespace Education.classes.Basics
 
     class DelegateCovarianceContravarianceTraining : ITask
     {
-        delegate Test TestGenerator(string name, string testCondition, string answer);
+        delegate UnitTest TestGenerator(string name, string testCondition, string answer);
         public static void OutTask()
         {
             Console.WriteLine("----Ковариантность и Контравариантность----");
@@ -42,7 +42,7 @@ namespace Education.classes.Basics
 
             TestGenerator testGenerator;
             testGenerator = BuildTest; // ковариантность
-            Test test = testGenerator("1.Test", "1+1=", "2");
+            UnitTest test = testGenerator("1.Test", "1+1=", "2");
             Console.WriteLine(test.Number);
             Console.WriteLine(test.Condition);
             Console.WriteLine(test.ToString());

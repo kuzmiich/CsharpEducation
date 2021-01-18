@@ -9,7 +9,7 @@ namespace Education.classes.Basics
     }
     class Test2
     {
-        public Test test;
+        public UnitTest test;
     }
     class NullTraining : ITask
     {
