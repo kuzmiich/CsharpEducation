@@ -67,6 +67,8 @@ namespace Education
             DelegateCovarianceContravarianceTraining.OutTask();
             Console.WriteLine(LINE);
 
+            DelegateActionPredicateFunc.OutTask();
+            Console.WriteLine(LINE);
 
             SolidPrinciples.OutSolidPrinceples();
             Console.WriteLine(LINE);
