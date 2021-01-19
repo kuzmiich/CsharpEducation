@@ -33,10 +33,10 @@ namespace Education.classes.Basics
             // Func
             Func<int, int> getFactorialNumber = Factorial;
             int res1 = GetFactorialNumber(6, getFactorialNumber);
-            Console.WriteLine(n1);
+            Console.WriteLine(res1);
 
             int res2 = GetFactorialNumber(6, x => x * x);
-            Console.WriteLine(n2);
+            Console.WriteLine(res1);
         }
         private static void Operation(int x, int y, Action<int, int> operation)
         {
