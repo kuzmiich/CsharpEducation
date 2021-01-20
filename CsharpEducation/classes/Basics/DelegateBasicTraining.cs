@@ -3,7 +3,7 @@ using System;
 
 namespace Education.classes.Basics
 {
-    class DelegateTraining : ITask
+    class DelegateBasicTraining : ITask
     {
         delegate void Message();
         internal delegate T Operation<T, K>(K value);

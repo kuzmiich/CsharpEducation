@@ -52,7 +52,7 @@ namespace Education
             ExceptionTraining.OutTask();
             Console.WriteLine(LINE);
 
-            DelegateTraining.OutTask();
+            DelegateBasicTraining.OutTask();
             Console.WriteLine(LINE);
 
             DelegateUse.OutTask();

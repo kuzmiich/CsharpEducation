@@ -32,10 +32,10 @@ namespace Education.classes.Basics
 
             // Func
             Func<int, int> getFactorialNumber = Factorial;
-            int res1 = GetFactorialNumber(6, getFactorialNumber);
+            int res1 = GetPositiveInt(6, getFactorialNumber);
             Console.WriteLine(res1);
 
-            int res2 = GetFactorialNumber(6, x => x * x);
+            int res2 = GetPositiveInt(6, x => x * x);
             Console.WriteLine(res1);
         }
         private static void Operation(int x, int y, Action<int, int> operation)
@@ -57,7 +57,7 @@ namespace Education.classes.Basics
         {
             Console.WriteLine($"Деление чисел: { x/y }");
         }
-        private static int GetFactorialNumber(int x1, Func<int, int> retF)
+        private static int GetPositiveInt(int x1, Func<int, int> retF)
         {
             if (x1 > 0)
             {
