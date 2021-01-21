@@ -70,6 +70,9 @@ namespace Education
             DelegateActionPredicateFunc.OutTask();
             Console.WriteLine(LINE);
 
+            InterfaceBasicTraining.OutTask();
+            Console.WriteLine(LINE);
+
             SolidPrinciples.OutSolidPrinceples();
             Console.WriteLine(LINE);
         }
