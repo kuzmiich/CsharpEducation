@@ -3,6 +3,43 @@ using System;
 
 namespace Education.classes.Basics
 {
+    class InterfaceBasicTraining : ITask, IFoo, IBar
+    {
+        public static void OutTask() 
+        {
+            Console.WriteLine("---- Основные сведения об интерфейсах ----");
+            Console.WriteLine("Интерфейс представляет ссылочный тип, используется для определения \nнекоторого функционала - набор методов и свойств и реализации.");
+            Console.WriteLine("После данный функционал реализуют классы или структуры, которые применяют применяют данные интерфейса.");
+            Console.WriteLine("По умолчанию интерфейсы имеют модификатор доступа internal.\nИнтерфейсы не могут иметь модификатора доступа abstract");
+            Console.WriteLine("В интерфейсах константы и статические классы имеют модификатор доступа public");
+            Console.WriteLine("В класс можно добавлять неограниченное количество интерфейсов");
+            Console.WriteLine("1.Интерфейсы и преобразование типов");
+            Console.WriteLine("2.Явная реализация интерфейсов");
+            Console.WriteLine("Если мы явно реализуем поле или метод интерфейса, то по умолчанию он является закрытым.\nК нему можно обратиться только через интерфейс, или явному приведению к интерфейсу");
+            Console.WriteLine("Или если нам нужно переопределить метод в базовом классе.");
+            
+            // Все объекты Client являются объектами IAccount 
+            IMovable movable = new Car("Porsh", 10, "drive");
+            Console.WriteLine(movable.ToString());
+            movable.Move();
+
+            Car car = (Car)movable;
+            string moveName = ((Car)movable).NameMove;
+            Console.WriteLine(moveName);
+
+            //
+            BaseAction action1 = new HeroAction();
+            action1.Move();            // Move in BaseAction
+
+            IAction action2 = new HeroAction();
+            action2.Move();             // Move in BaseAction
+        }
+        public void Execute()
+        {
+            Console.WriteLine("Tester Executes");
+        }
+    }
+
     interface IMovable
     {
         public const int minSpeed = 0;     // минимальная скорость
@@ -36,8 +73,8 @@ namespace Education.classes.Basics
     }
     class Car : IMovable
     {
-        public string CarType { get; set; }
-        protected int CarYear { get; set; }
+        public string CarType { get; private set; }
+        protected int CarYear { get; private set; }
         public string NameMove { get; private set; }
         public Car(string carType, int carYear, string nameMove)
         {
@@ -51,8 +88,7 @@ namespace Education.classes.Basics
             get => NameMove;
             set => NameMove = value;
         }
-        public event IMovable.MoveHandler MoveEvent;
-        event IMovable.MoveHandler IMovable.MoveEvent
+        public event IMovable.MoveHandler MoveEvent
         {
             add
             {
@@ -72,31 +108,22 @@ namespace Education.classes.Basics
             return $"Car type - {CarType}, Car year - {CarYear}, Name of move - {NameMove}";
         }
     }
-    class InterfaceBasicTraining : ITask, IFoo, IBar
+    interface IAction
     {
-        public static void OutTask() 
+        void Move();
+    }
+    class BaseAction : IAction
+    {
+        public void Move()
         {
-            Console.WriteLine("---- Основные сведения об интерфейсах ----");
-            Console.WriteLine("Интерфейс представляет ссылочный тип, используется для определения \nнекоторого функционала - набор методов и свойств и реализации.");
-            Console.WriteLine("После данный функционал реализуют классы или структуры, которые применяют применяют данные интерфейса.");
-            Console.WriteLine("По умолчанию интерфейсы имеют модификатор доступа internal.\nИнтерфейсы не могут иметь модификатора доступа abstract");
-            Console.WriteLine("В интерфейсах константы и статические классы имеют модификатор доступа public");
-            Console.WriteLine("В класс можно добавлять неограниченное количество интерфейсов");
-            Console.WriteLine("1.Интерфейсы и преобразование типов");
-            Console.WriteLine("2.");
-
-            // Все объекты Client являются объектами IAccount 
-            IMovable movable = new Car("Porsh", 10, "drive");
-            Console.WriteLine(movable.ToString());
-            movable.Move();
-
-            Car car = (Car)movable;
-            string moveName = ((Car)movable).NameMove;
-            Console.WriteLine(moveName);
+            Console.WriteLine("Move in BaseAction");
         }
-        public void Execute()
+    }
+    class HeroAction : BaseAction
+    {
+        public new void Move()
         {
-            Console.WriteLine("Tester Executes");
+            Console.WriteLine("Move in HeroAction");
         }
     }
 }
