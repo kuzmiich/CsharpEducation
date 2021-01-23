@@ -5,7 +5,7 @@ using System.Linq;
 namespace Education.classes.Basics
 {
     /// <summary>
-    /// 
+    /// Tuple training class
     /// </summary>
     class TupleTraining : ITask
     {

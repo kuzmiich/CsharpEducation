@@ -3,9 +3,35 @@ using System;
 
 namespace Education.classes.Basics
 {
+    class IndexerTraining : ITask
+    {
+        public static void OutTask()
+        {
+            Console.WriteLine("Изучение индексаторов...");
+            Console.WriteLine("Тестирование индексаторов с простыми типами");
+            Console.WriteLine("Тестирование индексаторов со сложными типами");
+            Console.WriteLine("Создание индексаторов для перевода слов.Изменения и чтения слов.");
+            Matrix matrix = new Matrix();
+            Console.WriteLine(matrix[0, 0]);
+            //
+            Team inter = new Team();
+            inter[0] = new Player { Name = "Ronaldo", Number = 9 };
+            Console.WriteLine($"{inter[0].Name} - {inter[0].Number}");
+            //
+            Translator dict = new Translator();
+            string needWord = "blue";
+            Console.WriteLine(dict[needWord]);
+            dict[needWord] = "голубой";
+            Console.WriteLine($"{dict[needWord]}");
+            //
+            Console.WriteLine($"{dict[1].Source} - {dict[1].Target}");
+            dict[1] = new Word("", "лиловый");
+            Console.WriteLine($"{dict[1].Source} - {dict[1].Target}");
+        }
+    }
     class Matrix
     {
-        private int[,] numbers = new int[,] { 
+        private int[,] numbers = new int[,] {
         { 1, 2, 4 },
         { 2, 3, 6 },
         { 3, 4, 8 } };
@@ -60,7 +86,7 @@ namespace Education.classes.Basics
         }
         public string this[string source]
         {
-            get 
+            get
             {
                 Word word = null;
                 foreach (Word w in words)
@@ -73,7 +99,7 @@ namespace Education.classes.Basics
                 }
                 return word?.Target;
             }
-            set 
+            set
             {
                 foreach (Word word in words)
                 {
@@ -93,34 +119,8 @@ namespace Education.classes.Basics
             }
             set
             {
-                words[index].Target = value.Target;       
+                words[index].Target = value.Target;
             }
-        }
-    }
-    class IndexerTraining : ITask
-    {
-        public static void OutTask()
-        {
-            Console.WriteLine("Изучение индексаторов...");
-            Console.WriteLine("Тестирование индексаторов с простыми типами");
-            Console.WriteLine("Тестирование индексаторов со сложными типами");
-            Console.WriteLine("Создание индексаторов для перевода слов.Изменения и чтения слов.");
-            Matrix matrix = new Matrix();
-            Console.WriteLine(matrix[0, 0]);
-            //
-            Team inter = new Team();
-            inter[0] = new Player { Name = "Ronaldo", Number = 9 };
-            Console.WriteLine($"{inter[0].Name} - {inter[0].Number}");
-            //
-            Translator dict = new Translator();
-            string needWord = "blue";
-            Console.WriteLine(dict[needWord]);
-            dict[needWord] = "голубой";
-            Console.WriteLine($"{dict[needWord]}");
-            //
-            Console.WriteLine($"{dict[1].Source} - {dict[1].Target}");
-            dict[1] = new Word("", "лиловый");
-            Console.WriteLine($"{dict[1].Source} - {dict[1].Target}");
         }
     }
 }

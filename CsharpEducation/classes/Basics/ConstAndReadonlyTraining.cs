@@ -3,6 +3,16 @@ using System;
 
 namespace Education.classes.Basics
 {
+    class ConstAndReadonlyTraining : ITask
+    {
+        public static void OutTask()
+        {
+            const int a = 5;
+            // readonly int b = 1; не работает
+            Console.WriteLine("Изучил отличия константы времени выполнения(const) от константы времени компиляции(readonly)");
+            Console.WriteLine("константа readonly может быть изменена только в конструкторе");
+        }
+    }
     readonly struct @Math
     {
         //public readonly int operation = 5; не работает
@@ -12,16 +22,6 @@ namespace Education.classes.Basics
         {
             this.A = a;
             this.operation = b;
-        }
-    }
-    class ConstAndReadonlyTraining : ITask
-    {
-        public static void OutTask()
-        {
-            const int a = 5;
-            // readonly int b = 1; не работает
-            Console.WriteLine("Изучил отличия константы времени выполнения(const) от константы времени компиляции(readonly)");
-            Console.WriteLine("константа readonly может быть изменена только в конструкторе");
         }
     }
 }

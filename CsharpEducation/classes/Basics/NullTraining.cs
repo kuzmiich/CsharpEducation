@@ -3,14 +3,6 @@ using System;
 
 namespace Education.classes.Basics
 {
-    class Test
-    {
-        public string test2;
-    }
-    class Test2
-    {
-        public UnitTest test;
-    }
     class NullTraining : ITask
     {
         public static void OutTask()
@@ -27,5 +19,13 @@ namespace Education.classes.Basics
             string value =  test1?.test2 ?? "Поле класса содержит null";
             Console.WriteLine(value);
         }
+    }
+    class Test
+    {
+        public string test2;
+    }
+    class Test2
+    {
+        public UnitTest test;
     }
 }

@@ -3,6 +3,28 @@ using System;
 
 namespace Education.classes.Basics
 {
+    class StructTraining : ITask
+    {
+        public static void OutTask()
+        {
+            Console.WriteLine("Работа со структурами");
+            User user = new User();
+            user.DisplayInfo();
+            //
+            user.name = "name";
+            user.age = 18;
+            user.DisplayInfo();
+            //
+            string name = "Oleg";
+            int age = 5;
+            string gender = "male";
+            People people = new People(name, age, gender);
+
+            People.HiPeople(name);
+
+            people.DisplayInfo();
+        }
+    }
     struct User
     {
         public string name;
@@ -25,11 +47,13 @@ namespace Education.classes.Basics
             if (age > 0 || age < 120)
             {
                 this.age = age;
-            } else { throw new Exception("Error, incorrect data.Transfer number from 0 to 120"); }
+            }
+            else { throw new Exception("Error, incorrect data.Transfer number from 0 to 120"); }
             if (gender != "male" || gender != "female")
             {
                 this.gender = gender;
-            } else { throw new Exception("Error, incorrect data.Transfer 'male' or 'female'"); }
+            }
+            else { throw new Exception("Error, incorrect data.Transfer 'male' or 'female'"); }
         }
         internal static string HiPeople(string name)
         {
@@ -38,28 +62,6 @@ namespace Education.classes.Basics
         public void DisplayInfo()
         {
             Console.WriteLine($"Name: {this.name}  Age: {this.age}");
-        }
-    }
-    class StructTraining : ITask
-    {
-        public static void OutTask()
-        {
-            Console.WriteLine("Работа со структурами");
-            User user = new User();
-            user.DisplayInfo();
-            //
-            user.name = "name";
-            user.age = 18;
-            user.DisplayInfo();
-            //
-            string name = "Oleg";
-            int age = 5;
-            string gender = "male";
-            People people = new People(name, age, gender);
-
-            People.HiPeople(name);
-
-            people.DisplayInfo();
         }
     }
 }

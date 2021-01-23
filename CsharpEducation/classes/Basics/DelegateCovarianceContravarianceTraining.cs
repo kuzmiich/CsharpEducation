@@ -3,38 +3,6 @@ using System;
 
 namespace Education.classes.Basics
 {
-    class UnitTest
-    {
-        public uint Number { get; set; }
-        public string Condition { get; set; }
-
-        public UnitTest(uint number, string condition)
-        {
-            Number = number;
-            Condition = condition;
-        }
-        public virtual string TestCondition()
-        {
-            return $"{Number}.{Condition}?";
-        }
-    }
-    class TestClass : UnitTest
-    {
-        public string Answer { get; private set; }
-        public TestClass(uint number, string condition, string answer) : base(number, condition)
-        {
-            Answer = answer;
-        }
-        public override string TestCondition()
-        {
-            return $"{Number}.{Condition}?";
-        }
-        public string TestAnswer()
-        {
-            return $"Answer - {Answer}";
-        }
-    }
-
     class DelegateCovarianceContravarianceTraining : ITask
     {
         delegate UnitTest TestGenerator(uint name, string testCondition, string answer);
@@ -74,6 +42,37 @@ namespace Education.classes.Basics
         private static void TestInfo(UnitTest test)
         {
             Console.WriteLine(test.TestCondition());
+        }
+    }
+    class UnitTest
+    {
+        public uint Number { get; set; }
+        public string Condition { get; set; }
+
+        public UnitTest(uint number, string condition)
+        {
+            Number = number;
+            Condition = condition;
+        }
+        public virtual string TestCondition()
+        {
+            return $"{Number}.{Condition}?";
+        }
+    }
+    class TestClass : UnitTest
+    {
+        public string Answer { get; private set; }
+        public TestClass(uint number, string condition, string answer) : base(number, condition)
+        {
+            Answer = answer;
+        }
+        public override string TestCondition()
+        {
+            return $"{Number}.{Condition}?";
+        }
+        public string TestAnswer()
+        {
+            return $"Answer - {Answer}";
         }
     }
 }
