@@ -15,24 +15,40 @@ namespace Education.classes.Basics
             Console.WriteLine("В класс можно добавлять неограниченное количество интерфейсов");
             Console.WriteLine("1.Интерфейсы и преобразование типов");
             Console.WriteLine("2.Явная реализация интерфейсов");
+            Console.WriteLine("Если мы используем модификатор доступа не public для полей и методов, то необходимо использовать явную реализацию.");
             Console.WriteLine("Если мы явно реализуем поле или метод интерфейса, то по умолчанию он является закрытым.\nК нему можно обратиться только через интерфейс, или явному приведению к интерфейсу");
             Console.WriteLine("Или если нам нужно переопределить метод в базовом классе.");
-            
-            // Все объекты Client являются объектами IAccount 
+            Console.WriteLine("3.Реализация интерфейсов в базовых и прроизводных классов");
+            Console.WriteLine("Задача, создать метод в интерфейсе, в унаследуемом классе переопределить метод на abstract или virtual,\n а после реализовать в классе, который унаследует предыдущий");
+            // Интерфейсы и преобразование типов
             IMovable movable = new Car("Porsh", 10, "drive");
             Console.WriteLine(movable.ToString());
             movable.Move();
 
             Car car = (Car)movable;
-            string moveName = ((Car)movable).NameMove;
+            string moveName = ((Car)movable).TypeMove;
             Console.WriteLine(moveName);
-
-            //
+             
+            // Использование интерфейсов с методами класса
             BaseAction action1 = new HeroAction();
             action1.Move();            // Move in BaseAction
 
             IAction action2 = new HeroAction();
             action2.Move();             // Move in BaseAction
+
+            // создание события с помощью интерфейса
+            IMovable mov = new Car("Porsh", 10, "drive");
+            // подписываемся на событие
+            mov.MoveEvent += (string value) => Console.WriteLine(value);
+            mov.Move();
+
+            // Создание и переопределение метода или поля интерфейса в унаследованном классе.
+            
+            ICoin icoin = new Wallet(10, "USD", "25 cents");
+            icoin.ToString();             // Move in IAction
+
+            Wallet wallet = new Wallet(10, "USD", "25 cents");
+            wallet.Info();             // Move in HeroAction
         }
         public void Execute()
         {
@@ -75,37 +91,33 @@ namespace Education.classes.Basics
     {
         public string CarType { get; private set; }
         protected int CarYear { get; private set; }
-        public string NameMove { get; private set; }
+        public string TypeMove { get; private set; }
         public Car(string carType, int carYear, string nameMove)
         {
             CarType = carType;
             CarYear = carYear;
-            NameMove = nameMove;
+            TypeMove = nameMove;
 
         }
         string IMovable.Name
         {
-            get => NameMove;
-            set => NameMove = value;
+            get => TypeMove;
+            set => TypeMove = value;
         }
-        public event IMovable.MoveHandler MoveEvent
+        IMovable.MoveHandler _moveEvent;
+        event IMovable.MoveHandler IMovable.MoveEvent
         {
-            add
-            {
-                MoveEvent += value;
-            }
-            remove
-            {
-                MoveEvent -= value;
-            }
+            add => _moveEvent += value;
+            remove => _moveEvent -= value;
         }
+
         public void Move()
         {
-            Console.WriteLine($"Тип движения: { NameMove }");
+            Console.WriteLine($"Тип движения: { TypeMove }");
         }
         public override string ToString()
         {
-            return $"Car type - {CarType}, Car year - {CarYear}, Name of move - {NameMove}";
+            return $"Car type - {CarType}, Car year - {CarYear}, Name of move - {TypeMove}";
         }
     }
     interface IAction
@@ -124,6 +136,43 @@ namespace Education.classes.Basics
         public new void Move()
         {
             Console.WriteLine("Move in HeroAction");
+        }
+    }
+    interface ICoin
+    {
+        string Nominal { get; set; }
+        void Info();
+    }
+    abstract class Coin : ICoin
+    {
+        public abstract string CurrencyType { get; set; }
+        public abstract string Nominal { get; set; }
+
+        protected Coin()
+        {
+        }
+
+        public override string ToString()
+        {
+            return $"Currency type - {CurrencyType}, Nominal - {Nominal}";
+        }
+        public abstract void Info();
+    }
+    class Wallet : Coin
+    {
+        public static int Count { get; set; }
+        public override string Nominal { get; set; }
+        public override string CurrencyType { get; set; }
+        public Wallet(int count, string currencyType, string nominal)
+        {
+            Count = count;
+            CurrencyType = currencyType;
+            Nominal = nominal;
+        }
+
+        public override void Info()
+        {
+            Console.WriteLine($"{base.ToString()}, Count - {Count}");
         }
     }
 }
