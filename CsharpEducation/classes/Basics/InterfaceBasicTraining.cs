@@ -54,13 +54,29 @@ namespace Education.classes.Basics
             ClassLibrary.Client client2 = new ClassLibrary.Client("Олег", 200);
             var transaction = new ClassLibrary.NewTransaction<ClassLibrary.Client>();
             transaction.Operate(client1, client2, 150);
+
+            IProductTest<int> user1 = new ProductTest<int>(55);
+            Console.WriteLine(user1._id);
+            IProductTest<string> user2 = new ProductTest<string>("12345");
+            Console.WriteLine(user2._id);
         }
         public void Execute()
         {
             Console.WriteLine("Tester Executes");
         }
     }
-
+    interface IProductTest<T>
+    {
+        T _id { get; }
+    }
+    class ProductTest<T> : IProductTest<T>
+    {
+        public ProductTest(T id)
+        {
+            _id = id;
+        }
+        public T _id { get; private set; }
+    }
     interface IMovable
     {
         public const int minSpeed = 0;     // минимальная скорость
