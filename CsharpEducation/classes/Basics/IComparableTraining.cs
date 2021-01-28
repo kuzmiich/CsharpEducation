@@ -9,10 +9,10 @@ namespace Education.classes.Basics
     {
         public static void OutTask()
         {
-            Console.WriteLine("---- Сортировка объектов.Изучение интерфейса IComparable ----");
-            Console.WriteLine("Для сравнения объектов используется интерфейс IComparable");
-            Console.WriteLine("Для создания своей реализации сравнения объектов можно использовать интерфейс IComparer.Но он уже устарел");
-            Console.WriteLine("Для сравнения объектов используется IComparable с применением Linq");
+            Console.WriteLine("---- Сортировка объектов.Изучение интерфейса IComparable ----\n" +
+            "Для сравнения объектов используется интерфейс IComparable\n" +
+            "Для создания своей реализации сравнения объектов можно использовать интерфейс IComparer.Но он уже устарел\n" +
+            "Для сравнения объектов используется IComparable с применением Linq\n");
 
             Apple[] apples = new Apple[] {
                 new Apple(ApplesColor.Green, 1000),

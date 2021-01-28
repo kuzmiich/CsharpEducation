@@ -7,10 +7,10 @@ namespace Education.classes.Basics
     {
         public static void OutTask()
         {
-            Console.WriteLine("Изучение индексаторов...");
-            Console.WriteLine("Тестирование индексаторов с простыми типами");
-            Console.WriteLine("Тестирование индексаторов со сложными типами");
-            Console.WriteLine("Создание индексаторов для перевода слов.Изменения и чтения слов.");
+            Console.WriteLine("Изучение индексаторов...\n" +
+            "Тестирование индексаторов с простыми типами\n" +
+            "Тестирование индексаторов со сложными типами\n" +
+            "Создание индексаторов для перевода слов.Изменения и чтения слов.\n");
             Matrix matrix = new Matrix();
             Console.WriteLine(matrix[0, 0]);
             //

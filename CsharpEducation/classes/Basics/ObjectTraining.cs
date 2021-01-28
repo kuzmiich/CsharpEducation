@@ -22,10 +22,6 @@ namespace Education.classes.Basics
             object.ReferenceEquals(obj1, obj2);
             // скрытые поля
 
-            /*var arrBindings = new List<x>//21
-            {
-                
-            }; */
             /*Console.WriteLine(obj.GetType().GetFields(
                 y.PrivateScope |
                 y.Private |

@@ -8,8 +8,9 @@ namespace Education.classes.Basics
     {
         public static void OutTask()
         {
-            Console.WriteLine("--------Использование делегатов--------");
-            Console.WriteLine("Передача метода делегату представленному как поле класса");
+            Console.WriteLine("--------Использование делегатов--------\n" +
+            "Передача метода делегату представленному как поле класса\n"
+            );
             
             Account account = new Account(1000);
             account.RegisterHandler(new Account.AccountStateHandler(ShowMessage));

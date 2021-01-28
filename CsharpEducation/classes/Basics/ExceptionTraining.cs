@@ -7,13 +7,13 @@ namespace Education.classes.Basics
     {
         public static void OutTask()
         {
-            Console.WriteLine("--------Повторение Exceptions, реализация, как создавать классы Exception-------");
-            Console.WriteLine("InnerException: хранит информацию об исключении, которое послужило причиной текущего исключения");
-            Console.WriteLine("Message: хранит сообщение об исключении, текст ошибки");
-            Console.WriteLine("Source: хранит имя объекта или сборки, которое вызвало исключение");
-            Console.WriteLine("StackTrace: возвращает строковое представление стека вызывов, которые привели к возникновению исключения");
-            Console.WriteLine("TargetSite: возвращает метод, в котором и было вызвано исключение");
-            Console.WriteLine("Exception наследуется от интерфейса System.Runtime.Serialization ISerializable");
+            Console.WriteLine("--------Повторение Exceptions, реализация, как создавать классы Exception-------\n" +
+            "InnerException: хранит информацию об исключении, которое послужило причиной текущего исключения\n" +
+            "Message: хранит сообщение об исключении, текст ошибки\n" +
+            "Source: хранит имя объекта или сборки, которое вызвало исключение\n" +
+            "StackTrace: возвращает строковое представление стека вызывов, которые привели к возникновению исключения\n" +
+            "TargetSite: возвращает метод, в котором и было вызвано исключение\n" +
+            "Exception наследуется от интерфейса System.Runtime.Serialization ISerializable\n");
             try
             {
                 object obj = "you";

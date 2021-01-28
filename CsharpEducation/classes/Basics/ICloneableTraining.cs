@@ -12,12 +12,12 @@ namespace Education.classes.Basics
     {
         public static void OutTask()
         {
-            Console.WriteLine("----Изучение интерфейса ICloneable----");
-            Console.WriteLine("Реализация интерфейса ICloneable, и класса который его наследует");
-            Console.WriteLine("Есть метод объекта this.MemberwiseClone, для того чтобы сделать копию");
-            Console.WriteLine("Этот метод реализует поверхностное (неглубокое) копирование.");
-            Console.WriteLine("При глубоком копировании необходимо реализовать ВСЕ поля объекта");
-            Console.WriteLine();
+            Console.WriteLine("----Изучение интерфейса ICloneable----\n" +
+            "Реализация интерфейса ICloneable, и класса который его наследует\n" +
+            "Есть метод объекта this.MemberwiseClone, для того чтобы сделать копию\n" +
+            "Этот метод реализует поверхностное (неглубокое) копирование.\n" +
+            "При глубоком копировании необходимо реализовать ВСЕ поля объекта\n"
+            );
             
             // поверхностное копирование
             River river1 = new River("Птичь", 1000);
@@ -37,15 +37,7 @@ namespace Education.classes.Basics
 
         }
     }
-    public interface ICloneableDeep
-    {
-        object Clone();
-    }
-    public interface ICloneableSurface
-    {
-        object Clone();
-    }
-    class River : ICloneableSurface
+    class River : ICloneable
     {
         public River(string name, uint age)
         {
@@ -66,10 +58,10 @@ namespace Education.classes.Basics
 
         public object Clone()
         {
-            return this.MemberwiseClone();
+            return MemberwiseClone();
         }
     }
-    class River2 : ICloneableDeep
+    class River2 : ICloneable
     {
         public River2(string name, uint age)
         {
