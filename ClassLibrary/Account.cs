@@ -2,6 +2,58 @@
 
 namespace ClassLibrary
 {
+    public interface IAccount
+    {
+        uint Bank { get; set; }
+        void TakeMoney(uint sum);
+        void PutMoney(uint sum);
+    }
+    public interface IClient
+    {
+        string Name { get; set; }
+    }
+    public class Client : IClient, IAccount
+    {
+        public Client(string name, uint bank)
+        {
+            Name = name;
+            Bank = bank;
+        }
+
+        public string Name { get; set; }
+        public uint Bank { get; set; }
+
+        public void PutMoney(uint money)
+        {
+            Bank += money;
+            Console.WriteLine($"Сумма {money} добавлена на счет");
+        }
+
+        public void TakeMoney(uint money)
+        {
+            if (money <= Bank)
+            {
+                Bank -= money;
+                Console.WriteLine($"Сумма {money} снята со счета");
+            }
+            else
+            {
+                Console.WriteLine("Недостаточно денег на счете");
+            }
+        }
+    }
+    public class NewTransaction<T> where T: IAccount, IClient
+    {
+        public void Operate(T acc1, T acc2, uint sum)
+        {
+            if(acc1.Bank >= sum)
+            {
+                acc1.TakeMoney(sum);
+                acc2.PutMoney(sum);
+                Console.WriteLine($"{acc1.Name} : {acc1.Bank}\n{acc2.Name} : {acc2.Bank}");
+            }
+        }
+    }
     public class Account
     {
         public delegate void AccountStateHandler(string message);

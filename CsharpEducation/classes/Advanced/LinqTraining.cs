@@ -26,8 +26,13 @@ namespace Education.classes.Advanced
             Console.WriteLine($"Search value {num} in [{string.Join(' ', arr1)}]\n" +
                               $"The number was found? - {Search(num, 9, 8, 3, 4, 5)}");
         }
-        public static bool CheckArraySequence<T>(T[] arrFirst, T[] arrSecond) => arrFirst.SequenceEqual(arrSecond);
-        public static T[] Sort<T>(params T[] arr) => (arr.OrderBy(x => x)).ToArray<T>();
-        public static bool Search<T>(T index, params T[] arr) => (arr.Any(x => object.Equals(x, index)));
+        public static bool CheckArraySequence<T>(T[] arrFirst, T[] arrSecond) 
+            => arrFirst.SequenceEqual(arrSecond);
+
+        public static T[] Sort<T>(params T[] arr) 
+            => (arr.OrderBy(x => x)).ToArray<T>();
+
+        public static bool Search<T>(T index, params T[] arr) 
+            => (arr.Any(x => object.Equals(x, index)));
     }
 }

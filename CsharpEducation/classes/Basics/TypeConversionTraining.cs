@@ -117,14 +117,14 @@ namespace Education.classes.Basics
 
     class Client : Person
     {
-        public string Bank { get; set; }
+        public string _bankType { get; private set; }
         public Client(string name, string bank) : base(name)
         {
-            Bank = bank;
+            _bankType = bank;
         }
         public new void Display()
         {
-            Console.WriteLine($"Person { Name }, Bank { Bank }");
+            Console.WriteLine($"Person { Name }, Bank { _bankType }");
         }
     }
 }

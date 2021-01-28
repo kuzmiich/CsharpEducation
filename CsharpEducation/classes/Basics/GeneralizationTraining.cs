@@ -46,8 +46,6 @@ namespace Education.classes.Basics
                 Sum = 900
             };
             transaction2.Execute();
-            // 3
-
         }
     }
     class Account<T>

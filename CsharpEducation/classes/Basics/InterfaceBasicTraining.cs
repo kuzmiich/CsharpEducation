@@ -43,12 +43,17 @@ namespace Education.classes.Basics
             mov.Move();
 
             // Создание и переопределение метода или поля интерфейса в унаследованном классе.
-            
             ICoin icoin = new Wallet(10, "USD", "25 cents");
             icoin.ToString();             // Move in IAction
 
             Wallet wallet = new Wallet(10, "USD", "25 cents");
             wallet.Info();             // Move in HeroAction
+
+            // Использование обобщейний для интерфейсов
+            ClassLibrary.Client client1 = new ClassLibrary.Client("Tom", 300);
+            ClassLibrary.Client client2 = new ClassLibrary.Client("Олег", 200);
+            var transaction = new ClassLibrary.NewTransaction<ClassLibrary.Client>();
+            transaction.Operate(client1, client2, 150);
         }
         public void Execute()
         {
