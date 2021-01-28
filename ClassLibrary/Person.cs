@@ -8,8 +8,8 @@ namespace ClassLibrary
     public class Person : IComparable
     {
         // main fields
-        public string Gender { get; }
-        public string FIO { get; }
+        public string Gender { get; set; }
+        public string FIO { get; set; }
         public uint Age { get; private set; }
 
         // other fields

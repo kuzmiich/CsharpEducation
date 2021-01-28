@@ -73,8 +73,12 @@ namespace Education
             InterfaceBasicTraining.OutTask();
             Console.WriteLine(LINE);
 
+            ICloneableTraining.OutTask();
+            Console.WriteLine(LINE);
+
             LinqTraining.OutTask();
             Console.WriteLine(LINE);
+
             SolidPrinciples.OutSolidPrinceples();
             Console.WriteLine(LINE);
         }

@@ -14,7 +14,7 @@ namespace Education.classes.Basics
             Console.WriteLine("Ключевое слово new может скрывать реализацию базового класса.");
 
             // простое приведение
-            Person person1 = new Person("Олег");
+            Class person1 = new Class("Олег");
             person1.Display();
             Client client = new Client("Артем", "Ebank");
             client.Display();
@@ -22,17 +22,17 @@ namespace Education.classes.Basics
             employee.Display();
 
             //приведение вверх
-            Person person = new Client("Вова", "Epam");
+            Class person = new Client("Вова", "Epam");
             person.Display();
 
             // приведение вниз
             Client cl = new Client("Вова", "Epam");
-            Person person2 = cl;
+            Class person2 = cl;
             Client client1 = (Client)person2;
             
             // Ключевое слово as - С помощью него программа пытается преобразовать выражение к определенному типу, при этом не выбрасывает исключение.
             // В случае неудачного преобразования выражение будет содержать значение null
-            Person p = new Person("Tom");
+            Class p = new Class("Tom");
             Employee emp = p as Employee;
             if (p as Employee == null)
             {
@@ -54,7 +54,7 @@ namespace Education.classes.Basics
                 Console.WriteLine(ex.Message);
             }*/
             // is - проверке допустимости преобразования с помощью ключевого слова
-            Person person3 = new Person("Tom");
+            Class person3 = new Class("Tom");
             if (person3 is Employee)
             {
                 Employee employee2 = (Employee)person3;
@@ -65,7 +65,7 @@ namespace Education.classes.Basics
                 Console.WriteLine("Преобразование не допустимо");
             }
 
-            Person tom1 = new Person("Tom");
+            Class tom1 = new Class("Tom");
             Employee empl = tom1 as Employee;
             tom1.Name = "Bob";
             // Console.WriteLine(empl.Name); //System.NullReferenceException
@@ -93,10 +93,10 @@ namespace Education.classes.Basics
             return counter.Seconds;
         }
     }
-    class Person
+    class Class
     {
         public string Name { get; set; }
-        public Person(string name)
+        public Class(string name)
         {
             Name = name;
         }
@@ -106,7 +106,7 @@ namespace Education.classes.Basics
         }
     }
 
-    class Employee : Person
+    class Employee : Class
     {
         public string Company { get; set; }
         public Employee(string name, string company) : base(name)
@@ -115,7 +115,7 @@ namespace Education.classes.Basics
         }
     }
 
-    class Client : Person
+    class Client : Class
     {
         public string _bankType { get; private set; }
         public Client(string name, string bank) : base(name)
