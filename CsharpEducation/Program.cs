@@ -76,6 +76,9 @@ namespace Education
             ICloneableTraining.OutTask();
             Console.WriteLine(LINE);
 
+            IComparableTraining.OutTask();
+            Console.WriteLine(LINE);
+
             LinqTraining.OutTask();
             Console.WriteLine(LINE);
 

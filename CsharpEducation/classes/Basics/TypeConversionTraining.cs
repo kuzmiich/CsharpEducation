@@ -118,9 +118,9 @@ namespace Education.classes.Basics
     class Client : Class
     {
         public string _bankType { get; private set; }
-        public Client(string name, string bank) : base(name)
+        public Client(string name, string bankType) : base(name)
         {
-            _bankType = bank;
+            _bankType = bankType;
         }
         public new void Display()
         {
