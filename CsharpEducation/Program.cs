@@ -79,6 +79,9 @@ namespace Education
             IComparableTraining.OutTask();
             Console.WriteLine(LINE);
 
+            InterfaceCovarianceAndContravariance.OutTask();
+            Console.WriteLine(LINE);
+
             LinqTraining.OutTask();
             Console.WriteLine(LINE);
 
