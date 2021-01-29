@@ -20,7 +20,7 @@ namespace Education.classes.Basics
             IBank<DepositAccount> depositBank = new Bank<DepositAccount>();
             AccountCovariance acc1 = depositBank.CreateAccount(34);
 
-            IBank<AccountCovariance> ordinaryBank = new Bank<DepositAccount>(); // IBank<Account> ordinaryBank = depositBank;
+            IBank<AccountCovariance> ordinaryBank = new Bank<DepositAccount>(); //IBank<AccountCovariance> ordinaryBank = depositBank;
             AccountCovariance acc2 = ordinaryBank.CreateAccount(45);
 
             // контравариантность

@@ -2,6 +2,7 @@ using System;
 using Education.classes;
 using Education.classes.Basics;
 using Education.classes.Advanced;
+using Education.classes.Advanced.AdditionalFeaturesInOOP;
 using LibPeople = ClassLibrary.Person;
 
 namespace Education
@@ -81,6 +82,20 @@ namespace Education
 
             InterfaceCovarianceAndContravariance.OutTask();
             Console.WriteLine(LINE);
+
+            ExtensionMethodsTraining.OutTask();
+            Console.WriteLine(LINE);
+
+            PartialClassesAndMethodsTraining.OutTask();
+            Console.WriteLine(LINE);
+
+            AnonymousTypesTraining.OutTask();
+            Console.WriteLine(LINE);
+
+
+
+
+
 
             LinqTraining.OutTask();
             Console.WriteLine(LINE);

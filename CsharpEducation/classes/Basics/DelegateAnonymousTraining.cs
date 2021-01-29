@@ -27,7 +27,6 @@ namespace Education.classes.Basics
                 return x + y + z;
             };
             sum?.Invoke(1, 2);
-            //
         }
     }
 }
