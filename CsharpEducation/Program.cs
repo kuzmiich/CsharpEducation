@@ -92,6 +92,9 @@ namespace Education
             AnonymousTypesTraining.OutTask();
             Console.WriteLine(LINE);
 
+            PatternMatchingTraining.OutTask();
+            Console.WriteLine(LINE);
+
 
 
 
