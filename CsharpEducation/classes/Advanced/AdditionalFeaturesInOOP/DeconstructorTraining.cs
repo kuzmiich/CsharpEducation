@@ -7,8 +7,9 @@ namespace Education.classes.Advanced.AdditionalFeaturesInOOP
     {
         public static void OutTask()
         {
-            Console.WriteLine("----Деконструктор----" +
-            "Синтаксический сахар, который позволяет присваивать 2 и более переменным значение из класса"
+            Console.WriteLine("----Деконструктор----\n" +
+            "Синтаксический сахар, который позволяет присваивать 2 и более переменным значение из класса\n" +
+            "Метод Deconstruct принимает как минимум 2 параметра!\n"
             );
             FlashLite flashLite = new FlashLite { Type = "Usual", Power = 5000 };
             uint power; string type;
