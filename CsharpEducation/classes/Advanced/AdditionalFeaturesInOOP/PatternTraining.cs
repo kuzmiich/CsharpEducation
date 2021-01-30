@@ -36,7 +36,11 @@ namespace Education.classes.Advanced.AdditionalFeaturesInOOP
         public string Name { get; set; }        // имя пользователя
         public string Status { get; set; }      // статус пользователя
         public string Language { get; set; }    // язык пользователя
-        
+        /// <summary>
+        /// Property Pattern
+        /// </summary>
+        /// <param name="d"></param>
+        /// <returns></returns>
         static string GetMessage(Dude d) => d switch
         {
             { Language: "english" } => "Hello!",
@@ -46,5 +50,67 @@ namespace Education.classes.Advanced.AdditionalFeaturesInOOP
             { Language: "french" } => "Salut!",
             { } => "undefined"
         };
+        /// <summary>
+        /// Pattern tuple
+        /// </summary>
+        /// <param name="lang"></param>
+        /// <param name="daytime"></param>
+        /// <returns></returns>
+        static string GetMessage(string lang, string daytime) => (lang, daytime) switch
+        {
+            ("English", "morning") => "Good morning",
+            ("English", "day") => "good day",
+            _ => "Darova"
+        };
+        /// <summary>
+        /// Positional pattern
+        /// </summary>
+        /// <param name="info"></param>
+        /// <returns>Welcome string</returns>
+        static string GetWelcome(Dude info) => info switch
+        {
+            ("Oleg", _, "morning") => $"Good morning, {info.Name}",
+            ("Victor", _, "evening") => $"Good evening, {info.Name}",
+            ("Ivan", _, "german") => $"Guten Morgen, {info.Name}",
+            ("Nikita", _, "evening") => $"Guten Abend, {info.Name}",
+            (_, "admin", _) => "Hello, Admin",
+            (var name, var status, var lang) => $"{name} not found,{status} undefined ,{lang} unknown",
+            _ => "Здрасьть"
+        };
+        /// <summary>
+        /// Relational patterns
+        /// </summary>
+        /// <param name="sum"></param>
+        /// <returns></returns>
+        static decimal Calculate(decimal sum)
+        {
+            return sum switch
+            {
+                <= 0 => 0,
+                < 50000 => sum * 0.05m,
+                < 100000 => sum * 0.1m,
+                _ => sum * 0.3m
+            };
+        }
+        /// <summary>
+        /// Logical patterns
+        /// </summary>
+        /// <param name="age"></param>
+        /// <returns></returns>
+        static string CheckAge(int age)
+        {
+            return age switch
+            {
+                < 1 or > 120 => "Недействительный возраст",   // если age больше 110 и меньше 1
+                >= 1 and < 18 => "Доступ запрещен",           // если age равно или больше 1 и меньше 18
+                _ => "Доступ разрешен"                      // в остальных случаях
+            };
+        }
+        public void Deconstruct(out string name,out string status,out string language)
+        {
+            name = Name;
+            status = Status;
+            language = Language;
+        }
     }
 }
