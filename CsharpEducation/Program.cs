@@ -95,6 +95,11 @@ namespace Education
             PatternMatchingTraining.OutTask();
             Console.WriteLine(LINE);
 
+            PatternSwitchTraining.OutTask();
+            Console.WriteLine(LINE);
+
+            RecordsTraining.OutTask();
+            Console.WriteLine(LINE);
 
 
 

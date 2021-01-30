@@ -3,7 +3,7 @@ using System;
 
 namespace Education.classes.Advanced.AdditionalFeaturesInOOP
 {
-    class PatternTraining : ITask
+    class PatternSwitchTraining : ITask
     {
         public static void OutTask()
         {
