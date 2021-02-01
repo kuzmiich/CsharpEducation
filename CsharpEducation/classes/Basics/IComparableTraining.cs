@@ -20,7 +20,7 @@ namespace Education.classes.Basics
                 new Apple(ApplesColor.Red, 200),
                 new Apple(ApplesColor.Yellow, 500),
             };
-            var sortedApples = apples.OrderBy(apple => apple.Weight);
+            var sortedApples = apples.OrderBy(apple => apple.Price);
             
             foreach (var apple in sortedApples)
             {
@@ -51,7 +51,7 @@ namespace Education.classes.Basics
         }
         public int CompareTo(Apple apple)
         {
-            return Price.CompareTo(apple.Price);
+            return Color.CompareTo(apple.Weight);
         }
     }
 }

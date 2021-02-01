@@ -101,6 +101,9 @@ namespace Education
             RecordsTraining.OutTask();
             Console.WriteLine(LINE);
 
+            CollectionTraining.OutTask();
+            Console.WriteLine(LINE);
+
 
 
 

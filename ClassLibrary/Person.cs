@@ -54,7 +54,7 @@ namespace ClassLibrary
             }
             else
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Invalid operation.");
             }
         }
     }

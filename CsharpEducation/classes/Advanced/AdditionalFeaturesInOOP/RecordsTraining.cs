@@ -28,7 +28,7 @@ namespace Education.classes.Advanced.AdditionalFeaturesInOOP
             public string Name { get; init; }
             public uint Age { get; init; }
 
-            public void Deconstruct(string name, uint age)
+            public void Deconstruct(out string name, out uint age)
             {
                 name = Name;
                 age = Age;
