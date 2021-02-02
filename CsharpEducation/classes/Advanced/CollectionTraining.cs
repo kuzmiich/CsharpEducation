@@ -45,13 +45,12 @@ namespace Education.classes.Advanced
             var nums = Enumerable.Range(0, 100000000).ToArray();
             Partitioner<int> partitioner2 = Partitioner.Create<int>(nums, true);
             OrderablePartitioner<Tuple<int, int>> customPartitioner = Partitioner.Create(0, nums.Length);
-            Math
-            Span<>
+            
             // 2.ObservableCollection, library : System.Collections.ObjectModel, System.Collections.Specialized
             ObservableCollection<int> obj = new ObservableCollection<int>();
             obj.Count();
             obj.CollectionChanged += Obj_CollectionChanged;
-
+            
             // 3.Реализация IEnumerable и IEnumerator
             Week week = new Week();
             foreach (var w in week)

@@ -104,11 +104,18 @@ namespace Education
             CollectionTraining.OutTask();
             Console.WriteLine(LINE);
 
+            StringTraining.OutTask();
+            Console.WriteLine(LINE);
 
+            AdditionalClassesAndStructures.OutTask();
+            Console.WriteLine(LINE);
 
 
 
             LinqTraining.OutTask();
+            Console.WriteLine(LINE);
+
+            OOP_PrinciplesTraining.OutOOP_Principles();
             Console.WriteLine(LINE);
 
             SolidPrinciples.OutSolidPrinceples();
