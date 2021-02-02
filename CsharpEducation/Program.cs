@@ -112,6 +112,9 @@ namespace Education
 
 
 
+
+
+
             LinqTraining.OutTask();
             Console.WriteLine(LINE);
 
