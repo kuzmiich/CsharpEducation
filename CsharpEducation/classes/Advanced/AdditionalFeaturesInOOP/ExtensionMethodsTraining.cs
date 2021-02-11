@@ -27,6 +27,12 @@ namespace Education.classes.Advanced
     }
     public static class StringExtends
     {
+        /// <summary>
+        /// Defines number of characters in a string
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static int CharCount(this string str, char c)
         {
             int counter = 0;
@@ -38,6 +44,23 @@ namespace Education.classes.Advanced
                 }
             }
             return counter;
+        }
+        /// <summary>
+        /// Type conversion method
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static T To<T>(this string text)
+        {
+            try
+            {
+                return (T)Convert.ChangeType(text, typeof(T));
+            }
+            catch
+            {
+                return default(T);
+            }
         }
     }
     public static class IntExtends

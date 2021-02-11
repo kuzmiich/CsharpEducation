@@ -4,6 +4,7 @@ using Education.classes.Basics;
 using Education.classes.Advanced;
 using Education.classes.Advanced.AdditionalFeaturesInOOP;
 using LibPeople = ClassLibrary.Person;
+using Education.classes.Advanced.Multithreading;
 
 namespace Education
 {
@@ -110,7 +111,8 @@ namespace Education
             AdditionalClassesAndStructures.OutTask();
             Console.WriteLine(LINE);
 
-
+            MultithreadingBasicTraining.OutTask();
+            Console.WriteLine(LINE);
 
 
 
