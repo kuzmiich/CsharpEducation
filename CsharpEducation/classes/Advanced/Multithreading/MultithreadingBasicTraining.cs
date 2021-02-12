@@ -6,7 +6,8 @@ namespace Education.classes.Advanced.Multithreading
 {
     class MultithreadingBasicTraining : ITask
     {
-        private static object syncLocker = new object();
+        private static AutoResetEvent _waitHandler = new AutoResetEvent(true);
+        private static object _syncLocker = new object();
 
         public static void OutTask()
         {
@@ -15,9 +16,10 @@ namespace Education.classes.Advanced.Multithreading
                 "1.Перебор методов и свойств класса. Thread\n" +
                 "2.Для создания потока без параметров 'void Name(){}' используется 'new ThreadStart(имя метода)'\n" +
                 "Для создания потоков с передачей параметра 'void Name(object name){}' используется 'new ParameterizedThreadStart(имя метода)'\n" +
-                "3.Синхронизация потоков.\n" +
-                "4.Мониторы\n" +
-                "5.Класс AutoResetEvent\n" +
+                "3.Синхронизация потоков:\n" +
+                "Синхронизация с использованием lock(object) {}\n" +
+                "_______________________________Мониторы\n" +
+                "_______________________________Класс AutoResetEvent\n" +
                 ""
             );
 
@@ -79,19 +81,28 @@ namespace Education.classes.Advanced.Multithreading
             Random rand = new Random();
 
             Console.WriteLine("Вывод для новых потоков:");
+            // 1
             /*for (int i = 0; i < 5; i++)
             {
                 Thread myThread = new Thread(Factorial);
                 myThread.Name = "Поток " + i.ToString();
                 myThread.Start(i);
             }*/
+            // 2
             /*for (int i = 0; i < 5; i++)
             {
                 Thread myThread = new Thread(Factorial2);
                 myThread.Name = "Поток " + i.ToString();
                 myThread.Start(i);
             }*/
-            
+            // 3
+            /*for (int i = 0; i < 5; i++)
+            {
+                Thread myThread = new Thread(Factorial2);
+                myThread.Name = "Поток " + i.ToString();
+                myThread.Start(i);
+            }*/
+            AutoResetEvent.WaitAll(new WaitHandle[] { _waitHandler });
         }
 
         private static void Increment(object value)
@@ -106,7 +117,7 @@ namespace Education.classes.Advanced.Multithreading
 
         public static void Factorial(object num)
         {
-            lock (syncLocker)
+            lock (_syncLocker)
             {
                 int x = 1;
                 for (int i = 1; i < (int)num + 1; i++)
@@ -122,7 +133,7 @@ namespace Education.classes.Advanced.Multithreading
             bool acquiredLock = false;
             try
             {
-                Monitor.Enter(syncLocker, ref acquiredLock);
+                Monitor.Enter(_syncLocker, ref acquiredLock);
 
                 int x = 1;
                 for (int i = 1; i < (int)num + 1; i++)
@@ -136,9 +147,22 @@ namespace Education.classes.Advanced.Multithreading
             {
                 if (acquiredLock)
                 {
-                    Monitor.Exit(syncLocker);
+                    Monitor.Exit(_syncLocker);
                 }
             }
+        }
+        public static void Factorial3(object num)
+        {
+
+            _waitHandler.WaitOne();
+            int x = 1;
+            for (int i = 1; i < (int)num + 1; i++)
+            {
+                x = x * i;
+                Console.WriteLine("{0}: {1}", Thread.CurrentThread.Name, x);
+                Thread.Sleep(100);
+            }
+            _waitHandler.Set();
         }
     }
 }

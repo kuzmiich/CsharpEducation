@@ -114,6 +114,9 @@ namespace Education
             MultithreadingBasicTraining.OutTask();
             Console.WriteLine(LINE);
 
+            MutexeSemaphoreTimerTraining.OutTask();
+            Console.WriteLine(LINE);
+
 
 
 
