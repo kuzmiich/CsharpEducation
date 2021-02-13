@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Education.classes.Advanced
 {
-    class ExtensionMethodsTraining : ITask
+    class ExtensionMethodTraining : ITask
     {
         public static void OutTask()
         {

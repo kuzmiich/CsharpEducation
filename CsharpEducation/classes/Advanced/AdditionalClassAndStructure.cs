@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Education.classes.Advanced
 {
-    class AdditionalClassesAndStructures : ITask
+    class AdditionalClassAndStructure : ITask
     {
         public static void OutTask()
         {

@@ -3,7 +3,7 @@ using System;
 
 namespace Education.classes.Basics
 {
-    class AccessModifiers : ITask
+    class AccessModifier : ITask
     {
         public static void OutTask()
         {

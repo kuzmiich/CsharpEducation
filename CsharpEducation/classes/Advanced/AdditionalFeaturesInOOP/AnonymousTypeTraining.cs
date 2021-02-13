@@ -3,7 +3,7 @@ using System;
 
 namespace Education.classes.Advanced.AdditionalFeaturesInOOP
 {
-    class AnonymousTypesTraining : ITask
+    class AnonymousTypeTraining : ITask
     {
         public static void OutTask()
         {

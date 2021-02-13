@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Education.classes
 {
-    public sealed class SolidPrinciples
+    public sealed class SolidPrinciple
     {
         public static void OutSolidPrinceples()
         {

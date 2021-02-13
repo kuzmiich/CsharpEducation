@@ -33,7 +33,7 @@ namespace Education
             IndexerTraining.OutTask();
             Console.WriteLine(LINE);
 
-            AccessModifiers.OutTask();
+            AccessModifier.OutTask();
             Console.WriteLine(LINE);
 
             ConstAndReadonlyTraining.OutTask();
@@ -84,13 +84,13 @@ namespace Education
             InterfaceCovarianceAndContravariance.OutTask();
             Console.WriteLine(LINE);
 
-            ExtensionMethodsTraining.OutTask();
+            ExtensionMethodTraining.OutTask();
             Console.WriteLine(LINE);
 
-            PartialClassesAndMethodsTraining.OutTask();
+            PartialClassAndMethodTraining.OutTask();
             Console.WriteLine(LINE);
 
-            AnonymousTypesTraining.OutTask();
+            AnonymousTypeTraining.OutTask();
             Console.WriteLine(LINE);
 
             PatternMatchingTraining.OutTask();
@@ -108,7 +108,7 @@ namespace Education
             StringTraining.OutTask();
             Console.WriteLine(LINE);
 
-            AdditionalClassesAndStructures.OutTask();
+            AdditionalClassAndStructure.OutTask();
             Console.WriteLine(LINE);
 
             MultithreadingBasicTraining.OutTask();
@@ -123,10 +123,10 @@ namespace Education
             LinqTraining.OutTask();
             Console.WriteLine(LINE);
 
-            OOP_PrinciplesTraining.OutOOP_Principles();
+            OOP_PrincipleTraining.OutOOP_Principles();
             Console.WriteLine(LINE);
 
-            SolidPrinciples.OutSolidPrinceples();
+            SolidPrinciple.OutSolidPrinceples();
             Console.WriteLine(LINE);
         }
         static char[] GetLine(int length, char separator)

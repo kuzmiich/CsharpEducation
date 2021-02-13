@@ -3,7 +3,7 @@ using System;
 
 namespace Education
 {
-    class OOP_PrinciplesTraining : ITask
+    class OOP_PrincipleTraining : ITask
     {
         public static void OutOOP_Principles()
         {

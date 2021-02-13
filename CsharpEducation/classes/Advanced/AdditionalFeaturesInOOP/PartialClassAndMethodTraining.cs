@@ -3,7 +3,7 @@ using System;
 
 namespace Education.classes.Advanced.AdditionalFeaturesInOOP
 {
-    class PartialClassesAndMethodsTraining : ITask
+    class PartialClassAndMethodTraining : ITask
     {
         public static void OutTask()
         {
