@@ -117,6 +117,10 @@ namespace Education
             MutexeSemaphoreTimerTraining.OutTask();
             Console.WriteLine(LINE);
 
+            ClassTaskTraining.OutTask();
+            Console.WriteLine(LINE);
+
+
 
 
 
