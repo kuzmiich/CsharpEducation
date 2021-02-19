@@ -1,5 +1,6 @@
 ﻿using Education.interfaces;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -11,11 +12,16 @@ namespace Education.classes.Advanced.Multithreading
         {
             Console.WriteLine(
                 "---- Изучение класса Task ----\n" +
-                "Класс обертка, который предназначен для упрощения работы с потоками.\n" +
+                "1.Класс обертка, который предназначен для упрощения работы с потоками.\n" +
                 "Вложенная задача начнет выполняться только после выполнения внешней задачи.\n" +
-                "Если необходимо, чтобы вложенная задача выполнялась с внешней нужно использовать значение TaskCreationOptions.AttachedToParent\n"
+                "Если необходимо, чтобы вложенная задача выполнялась с внешней нужно использовать значение TaskCreationOptions.AttachedToParent\n" +
+                "2.Задачи продолжения. Задачи, которые позволяют определить задачи, которые выполняются после выполнения других задач.\n" +
+                "Такие задачи мы можем вызвать после выполнения некоторой задачи, определить условия при котором будет выполняться эта задача,\n" +
+                "Передать из предыдущей задачи в следующие некоторые данные.\n" +
+                "3.Класса Parallel. Его методы и свойства\n" +
+                "4.Отмена задач и параллельных операций. CancellationToken\n"
             );
-
+            // 1
             Task t = new Task(() => { });
             Console.WriteLine($"Объект состояния задачи - {t.AsyncState}");
             Console.WriteLine($"Объект исключения, возникшего при выполнении задачи - {t.Exception}");
@@ -23,15 +29,13 @@ namespace Education.classes.Advanced.Multithreading
             Console.WriteLine($"Варианты создания - {t.CreationOptions}");
 
             // способы запуска потока
-            // 1
+            
             Task task1 = new Task(() => Console.WriteLine("Hello Task 1!"));
-            task1.Start();
-            // 2
+            
             Task task2 = Task.Factory.StartNew(() => Console.WriteLine("Hello Task 2!"));
-            // 3
+            
             Task task3 = Task.Run(() => Console.WriteLine("Hello Task 3!"));
 
-            // 4
             Task task4 = new Task(Display);
             task4.Start();
             task4.Wait();
@@ -39,12 +43,12 @@ namespace Education.classes.Advanced.Multithreading
             // вложенные Task
             var outer = Task.Run(() =>
             {
-                Console.WriteLine("Outer task starting...");
+                Console.WriteLine("Задача Outer началась...");
                 var inner = Task.Factory.StartNew(() => 
                 {
-                    Console.WriteLine("Inner task starting...");
-                    Thread.Sleep(2000);
-                    Console.WriteLine("Inner task finished.");
+                    Console.WriteLine("Задача Inner началась...");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("Задача task закончилась.");
                 }, 
                 TaskCreationOptions.AttachedToParent);// используется для синхронизации с внешним потоком
             });
@@ -72,7 +76,70 @@ namespace Education.classes.Advanced.Multithreading
 
             Book book = taskBook.Result;  // ожидаем получение результата
             Console.WriteLine(book.ToString());
-            Console.WriteLine(book.CurrentCost(DateTime.Now));
+            Console.WriteLine($"Стоимость книги - {book.Cost}");
+
+            // 2. Задачи продолжения
+            Task task5 = new Task(() =>
+            {
+                Console.WriteLine($"Id задачи: {Task.CurrentId}");
+            });
+            Task task6 = task5.ContinueWith(Display);
+
+            task5.Start();
+
+            task6.Wait();
+
+            Task<string> taskRain = new Task<string>(() =>
+            {
+                return "Начался дождь!\nИдет дождь...";
+            });
+
+            Task endTaskRain = taskRain.ContinueWith(rain =>
+            {
+                Console.WriteLine(rain.Result);
+            });
+
+            taskRain.Start();
+            taskRain.Wait();
+
+            endTaskRain.Wait();
+
+            Console.WriteLine("Дождь закончился!");
+
+            // class Parallel 
+            Parallel.Invoke();// запускает некоторую паралельную операцию
+
+            ParallelLoopResult parallelLoopResult = Parallel.For(1, 10, Factorial);
+            Console.WriteLine(
+                $"1.Завершилось ли полное выполнение цикла - {parallelLoopResult.IsCompleted}\n" +
+                $"Индекс, на котором произошло прерывание работы - {parallelLoopResult.LowestBreakIteration}");
+
+            var parallelLoopResult2 = Parallel.ForEach<int>(new List<int>() { 1, 3, 5, 9 }, Factorial);
+            Console.WriteLine(
+                $"2.Завершилось ли полное выполнение цикла - {parallelLoopResult2.IsCompleted}\n" +
+                $"Индекс, на котором произошло прерывание работы - {parallelLoopResult2.LowestBreakIteration}");
+
+            // 4. Отмена задач и параллельных операций. CancellationToken
+            CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
+            CancellationToken cancellationToken = cancelTokenSource.Token;
+            
+            Task cancellationTokenTask = new Task(() => {
+                Console.WriteLine("Test task");
+
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    Console.WriteLine("Операция прервана!");
+                }
+
+                Thread.Sleep(5000);
+            });
+            cancellationTokenTask.Start();
+
+            {
+                Thread.Sleep(1000);
+                cancelTokenSource.Cancel();
+            }
+
             Console.WriteLine("Завершение метода Main");
         }
 
@@ -81,6 +148,36 @@ namespace Education.classes.Advanced.Multithreading
             Console.WriteLine("Начало метода Display");
 
             Console.WriteLine("Конец метода Display");
+        }
+        private static void Display(Task t)
+        {
+            Console.WriteLine($"Id задачи: {Task.CurrentId}");
+            Console.WriteLine($"Id предыдущей задачи: {t.Id}");
+            Thread.Sleep(3000);
+        }
+        static long Factorial(int x)
+        {
+            int result = 1;
+
+            for (int i = 1; i <= x; i++)
+            {
+                result *= i;
+            }
+            return result;
+        }
+        static void Factorial(int x, ParallelLoopState parallel)
+        {
+            int result = 1;
+
+            for (int i = 1; i <= x; i++)
+            {
+                result *= i;
+                if (i > 6)
+                {
+                    parallel.Break();
+                }
+            }
+            Console.WriteLine(result);
         }
     }
     public enum BookImportance { Unknown, Recognize, Famous };
@@ -111,31 +208,6 @@ namespace Education.classes.Advanced.Multithreading
                     _ => throw new Exception("Unknown importance.")
                 };
             }
-        }
-        public double CurrentCost(DateTime currentTime)
-        {
-            double resCost = 0;
-            if (currentTime.Month == 12 || currentTime.Month > 0 && currentTime.Month <= 2)
-            {
-                resCost = Cost * 0.8;
-            }
-            else if (currentTime.Month > 2 && currentTime.Month <= 5)
-            {
-                resCost = Cost * 1;
-            }
-            else if (currentTime.Month > 5 && currentTime.Month <= 8)
-            {
-                resCost = Cost * 1.2;
-            }
-            else if (currentTime.Month > 9 && currentTime.Month <= 12)
-            {
-                resCost = Cost * 1;
-            }
-            else
-            {
-                throw new Exception("Wrong datetime.");
-            }
-            return resCost;
         }
 
         public override string ToString()
