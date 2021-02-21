@@ -2,7 +2,7 @@
 using System;
 using Account = ClassLibrary.Account;
 
-namespace Education.classes.Basics
+namespace Education.classes.Basics.Delegate
 {
     class DelegateUse : ITask
     {

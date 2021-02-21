@@ -124,7 +124,7 @@ namespace Education.classes.Advanced.Multithreading
             CancellationToken cancellationToken = cancelTokenSource.Token;
             
             Task cancellationTokenTask = new Task(() => {
-                Console.WriteLine("Test task");
+                Console.WriteLine("Тестовая задача)");
 
                 if (cancellationToken.IsCancellationRequested)
                 {
@@ -133,12 +133,12 @@ namespace Education.classes.Advanced.Multithreading
 
                 Thread.Sleep(5000);
             });
+
             cancellationTokenTask.Start();
 
-            {
-                Thread.Sleep(1000);
-                cancelTokenSource.Cancel();
-            }
+            cancelTokenSource.Cancel();
+
+            cancellationTokenTask.Wait();
 
             Console.WriteLine("Завершение метода Main");
         }

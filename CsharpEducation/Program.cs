@@ -3,8 +3,9 @@ using Education.classes;
 using Education.classes.Basics;
 using Education.classes.Advanced;
 using Education.classes.Advanced.AdditionalFeaturesInOOP;
-using LibPeople = ClassLibrary.Person;
 using Education.classes.Advanced.Multithreading;
+using Education.classes.Basics.Delegate;
+using LibPeople = ClassLibrary.Person;
 
 namespace Education
 {
@@ -118,6 +119,9 @@ namespace Education
             Console.WriteLine(LINE);
 
             ClassTaskTraining.OutTask();
+            Console.WriteLine(LINE);
+
+            AsyncTraining.OutTask();
             Console.WriteLine(LINE);
 
 

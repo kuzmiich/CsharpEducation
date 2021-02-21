@@ -1,6 +1,7 @@
 ﻿using Education.interfaces;
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Education.classes.Advanced.Multithreading
 {
@@ -10,10 +11,15 @@ namespace Education.classes.Advanced.Multithreading
         public static void OutTask()
         {
             Console.WriteLine("---- Изучение Mutex, Semaphore, Timer ----\n" +
-                "1.Mutex представляет из себя объект ссылочного типа, который используется в механизме:\n" +
+                "1.Mutex представляет из себя неизменяемый объект ссылочного типа, который используется в механизме:\n" +
                 "'приостановка потока пока не получен _mutex + после обработки запроса поток освобождается.'\n" +
-                "2.''\n" +
-                "3.\n"
+                "2.Semaphore - неизменяемый объект ссылочного типа, которой можно ограничивать по min и max количеству участников.\n" +
+                "3.Timer - неизменяемый объект ссылочного типа\n" +
+                "Используется для остановки потока на определенное время.Передаваемые параметры:\n" +
+                "1.экземпляр делегата TimerCallback\n" +
+                "2.параметры передаваемого метода\n" +
+                "3.Через сколько нужно запустить\n" +
+                "4.На какое время ставить задержку\n"
             );
 
             // 1
@@ -36,7 +42,7 @@ namespace Education.classes.Advanced.Multithreading
 
             /*TimerCallback timerCallback = new TimerCallback(Hello);
             int dueTime = 0;
-            int period = 2000;
+            int period = 1000;
             Timer timer = new Timer(timerCallback, null, dueTime, period);*/
         }
 
@@ -52,7 +58,7 @@ namespace Education.classes.Advanced.Multithreading
             }
             _mutex.ReleaseMutex(); // когда мьютекс не нужен освобождает поток
         }
-        public static void Hello(object obj)
+        private static void Hello(object obj)
         {
             Console.WriteLine("Hello world");
         }
@@ -73,7 +79,7 @@ namespace Education.classes.Advanced.Multithreading
             _thread.Start();
         }
 
-        public void Read()
+        private void Read()
         {
             int counter = 3;
             while (counter > 0)

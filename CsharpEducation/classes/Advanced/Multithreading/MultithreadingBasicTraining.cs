@@ -1,6 +1,7 @@
 ﻿using Education.interfaces;
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Education.classes.Advanced.Multithreading
 {
@@ -82,26 +83,27 @@ namespace Education.classes.Advanced.Multithreading
 
             Console.WriteLine("Вывод для новых потоков:");
             // 1
-            /*for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
-                Thread myThread = new Thread(Factorial);
-                myThread.Name = "Поток " + i.ToString();
-                myThread.Start(i);
-            }*/
+                Thread myThread1 = new Thread(Factorial);
+                myThread1.Name = "Поток " + i.ToString();
+                myThread1.Start(i);
+            }
             // 2
-            /*for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
-                Thread myThread = new Thread(Factorial2);
-                myThread.Name = "Поток " + i.ToString();
-                myThread.Start(i);
-            }*/
+                Thread myThread2 = new Thread(Factorial2);
+                myThread2.Name = "Поток " + i.ToString();
+                myThread2.Start(i);
+            }
             // 3
-            /*for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
-                Thread myThread = new Thread(Factorial2);
-                myThread.Name = "Поток " + i.ToString();
-                myThread.Start(i);
-            }*/
+                Thread myThread3 = new Thread(Factorial2);
+                myThread3.Name = "Поток " + i.ToString();
+                myThread3.Start(i);
+            }
+            Task.WaitAll();
             AutoResetEvent.WaitAll(new WaitHandle[] { _waitHandler });
         }
 

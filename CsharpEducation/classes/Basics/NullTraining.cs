@@ -1,4 +1,5 @@
-﻿using Education.interfaces;
+﻿using Education.classes.Basics.Delegate;
+using Education.interfaces;
 using System;
 
 namespace Education.classes.Basics

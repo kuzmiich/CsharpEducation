@@ -1,23 +1,32 @@
 ﻿using Education.interfaces;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace Education.classes.Advanced.Multithreading
 {
     class AsyncTraining : ITask
     {
-        public static void OutTask()
+        public async static void OutTask()
         {
-            Console.WriteLine();
+            Console.WriteLine(
+                "------- Асинхронность -------\n" +
+                "");
 
 
+            /*
+             * Тестировал насколько быстрее работает считывание данных из файла в синхронном потоке
+             * Для работы с файлами лучше использовать многопоточность))))
+             * 
+             */
             string path = @"./file.txt";
+
             ReadFile(path);
-            ReadFileAsync(path);
+
+            await ReadFileAsync(path);
         }
         public static void ReadFile(string path)
         {
-            string textFromFile;
             DateTime time = DateTime.Now;
             string buf = string.Empty;
             using (StreamReader fin = new StreamReader(path))
@@ -31,7 +40,7 @@ namespace Education.classes.Advanced.Multithreading
             Console.WriteLine($"Синхронное считывание - {DateTime.Now - time}");
 
         }
-        public static async void ReadFileAsync(string path)
+        public static async Task ReadFileAsync(string path)
         {
             DateTime time = DateTime.Now;
             string buf = string.Empty;

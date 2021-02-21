@@ -1,7 +1,7 @@
 ﻿using Education.interfaces;
 using System;
 
-namespace Education.classes.Basics
+namespace Education.classes.Basics.Delegate
 {
     class DelegateBasicTraining : ITask
     {
