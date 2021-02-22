@@ -119,7 +119,7 @@ namespace Education.classes.Advanced.Multithreading
                 $"2.Завершилось ли полное выполнение цикла - {parallelLoopResult2.IsCompleted}\n" +
                 $"Индекс, на котором произошло прерывание работы - {parallelLoopResult2.LowestBreakIteration}");
 
-            // 4. Отмена задач и параллельных операций. CancellationToken
+            // 4. Отмена задач и параллельных операций. CancellationToken, ParallelOptions
             CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
             CancellationToken cancellationToken = cancelTokenSource.Token;
             
@@ -128,7 +128,7 @@ namespace Education.classes.Advanced.Multithreading
 
                 if (cancellationToken.IsCancellationRequested)
                 {
-                    Console.WriteLine("Операция прервана!");
+                    Console.WriteLine("1.Операция прервана!");
                 }
 
                 Thread.Sleep(5000);
@@ -139,6 +139,19 @@ namespace Education.classes.Advanced.Multithreading
             cancelTokenSource.Cancel();
 
             cancellationTokenTask.Wait();
+
+            try
+            {
+                Parallel.For(1, 3, new ParallelOptions { CancellationToken = cancellationToken }, Factorial);
+            }
+            catch(OperationCanceledException ex)
+            {
+                Console.WriteLine("2.Операция прервана!");
+            }
+            finally
+            {
+                cancelTokenSource.Dispose();
+            }
 
             Console.WriteLine("Завершение метода Main");
         }
@@ -172,7 +185,7 @@ namespace Education.classes.Advanced.Multithreading
             for (int i = 1; i <= x; i++)
             {
                 result *= i;
-                if (i > 6)
+                if (i > 5)
                 {
                     parallel.Break();
                 }

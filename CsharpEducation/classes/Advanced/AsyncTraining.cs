@@ -1,6 +1,7 @@
 ﻿using Education.interfaces;
 using System;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Education.classes.Advanced.Multithreading
@@ -32,6 +33,25 @@ namespace Education.classes.Advanced.Multithreading
             ReadFile(path);
 
             await ReadFileAsync(path);
+
+            Console.WriteLine("1.Параллельный вызов асинхронных операций"); 
+            AsyncTraining asyncTraining = new AsyncTraining();
+            Task task1 = asyncTraining.HelloAsync();
+            task1.Wait();
+
+
+        }
+        public virtual async Task HelloAsync()
+        {
+            Task t1 = Task.Run(() => Hello());
+            Task t2 = Task.Run(() => Hello());
+            Task t3 = Task.Run(() => Hello());
+            
+            await Task.WhenAll(new[] { t1, t2, t3 });
+        }
+        private static void Hello()
+        {
+            Console.WriteLine("Hello world!");
         }
         public static void ReadFile(string path)
         {
