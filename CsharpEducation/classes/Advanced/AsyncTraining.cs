@@ -37,8 +37,8 @@ namespace Education.classes.Advanced.Multithreading
 
             // 1
             Console.WriteLine("-----1.Параллельный вызов асинхронных операций"); 
-            AsyncTraining asyncTraining = new AsyncTraining();
-            await asyncTraining.HelloAsync();
+            /*AsyncTraining asyncTraining = new AsyncTraining();
+            await asyncTraining.HelloAsync();*/
 
             // 2
             Console.WriteLine("-----2.Обработка ошибок в асинхронных методах\n" +
@@ -50,20 +50,20 @@ namespace Education.classes.Advanced.Multithreading
             Console.WriteLine("-----3.Отмена асинхронных операций\n" +
                 "Для отмены асинхронных операций также используются классы CancellationToken и CancellationTokenSource.\n");
 
-            CancellationTokenSource cts = new CancellationTokenSource();
+            /*CancellationTokenSource cts = new CancellationTokenSource();
             CancellationToken token = cts.Token;
-            FactorialAsync(6, token);
+            await FactorialAsync(6, token);
 
-            cts.Cancel();
+            cts.Cancel();*/
             // 4
             Console.WriteLine("-----4.Асинхронные стримы\n" +
                 "В версии C# 8.0 в C# были добавлены асинхронные стримы\n" +
                 "Для реализации используется yield и интерфейс IAsyncEnumberable<T> содержащийся в System.Collections.Generic\n");
 
-            await foreach (var number in GetNumbersAsync())
+            /*await foreach (var number in GetNumbersAsync())
             {
                 Console.WriteLine(number);
-            }
+            }*/
         }
         public static async IAsyncEnumerable<int> GetNumbersAsync()
         {

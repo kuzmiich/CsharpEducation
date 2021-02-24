@@ -6,6 +6,7 @@ using Education.classes.Advanced.AdditionalFeaturesInOOP;
 using Education.classes.Advanced.Multithreading;
 using Education.classes.Basics.Delegate;
 using LibPeople = ClassLibrary.Person;
+using Education.classes.Advanced.Linq;
 
 namespace Education
 {
@@ -123,6 +124,8 @@ namespace Education
 
             AsyncTraining.OutTask();
             Console.WriteLine(LINE);
+
+
 
 
 
