@@ -1,6 +1,6 @@
 ﻿using Education.interfaces;
 using System;
-using static ClassLibrary.Sorting;
+using static ClassLibrary.Logic.Sorting;
 
 namespace Education.classes.Basics
 {

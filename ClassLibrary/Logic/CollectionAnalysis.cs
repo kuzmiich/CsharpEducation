@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Education.classes.Advanced.Tools
+namespace ClassLibrary.Logic
 {
     public static class CollectionAnalysis
     {

@@ -1,4 +1,5 @@
-﻿using Education.classes.Advanced.Tools;
+﻿using ClassLibrary.Base;
+using ClassLibrary.Logic;
 using Education.interfaces;
 using System;
 using System.Collections.Generic;

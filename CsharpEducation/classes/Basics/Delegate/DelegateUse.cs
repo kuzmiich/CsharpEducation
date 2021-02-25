@@ -1,6 +1,6 @@
 ﻿using Education.interfaces;
 using System;
-using Account = ClassLibrary.Account;
+using Account = ClassLibrary.EmployedEducationalClases.Account;
 
 namespace Education.classes.Basics.Delegate
 {

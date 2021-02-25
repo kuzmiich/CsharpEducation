@@ -1,6 +1,6 @@
-﻿namespace Education.classes.Advanced.Tools
+﻿namespace ClassLibrary.Base
 {
-    class Phone
+    public class Phone
     {
         public Phone()
         {

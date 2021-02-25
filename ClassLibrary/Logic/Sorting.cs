@@ -1,4 +1,4 @@
-﻿namespace ClassLibrary
+﻿namespace ClassLibrary.Logic
 {
     public static class Sorting
     {

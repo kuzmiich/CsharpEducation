@@ -5,7 +5,7 @@ using Education.classes.Advanced;
 using Education.classes.Advanced.AdditionalFeaturesInOOP;
 using Education.classes.Advanced.Multithreading;
 using Education.classes.Basics.Delegate;
-using LibPeople = ClassLibrary.Person;
+using LibPeople = ClassLibrary.Base.Person;
 using Education.classes.Advanced.Linq;
 
 namespace Education
@@ -28,7 +28,7 @@ namespace Education
             LibPeople people;
             int[] arr = new int[] { 1, 2, 3, 4, 5, 6 };
 
-            ClassLibrary.Sorting.BubleSort(ref arr);
+            ClassLibrary.Logic.Sorting.BubleSort(ref arr);
             // !end
             Console.WriteLine(LINE);
 
@@ -125,14 +125,13 @@ namespace Education
             AsyncTraining.OutTask();
             Console.WriteLine(LINE);
 
-
-
-
-
-
-
             LinqTraining.OutTask();
             Console.WriteLine(LINE);
+
+            ParallelLinqTraining.OutTask();
+            Console.WriteLine(LINE);
+
+
 
             OOP_PrincipleTraining.OutOOP_Principles();
             Console.WriteLine(LINE);

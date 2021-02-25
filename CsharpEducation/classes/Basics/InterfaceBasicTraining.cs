@@ -1,5 +1,7 @@
-﻿using Education.interfaces;
+﻿using ClassLibrary.EmployedEducationalClases;
+using Education.interfaces;
 using System;
+using CLClient = ClassLibrary.EmployedEducationalClases.Client;
 
 namespace Education.classes.Basics
 {
@@ -55,9 +57,9 @@ namespace Education.classes.Basics
             wallet.Info();             // Move in HeroAction
 
             // Использование обобщейний для интерфейсов
-            ClassLibrary.Client client1 = new ClassLibrary.Client("Tom", 300);
-            ClassLibrary.Client client2 = new ClassLibrary.Client("Олег", 200);
-            var transaction = new ClassLibrary.NewTransaction<ClassLibrary.Client>();
+            CLClient client1 = new CLClient("Tom", 300);
+            CLClient client2 = new CLClient("Олег", 200);
+            var transaction = new NewTransaction<CLClient>();
             transaction.Operate(client1, client2, 150);
 
             IProductTest<int> user1 = new ProductTest<int>(55);

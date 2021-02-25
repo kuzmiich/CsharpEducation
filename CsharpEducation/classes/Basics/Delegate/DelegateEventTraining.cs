@@ -1,4 +1,6 @@
 ﻿using ClassLibrary;
+using ClassLibrary.Base;
+using ClassLibrary.EmployedEducationalClases;
 using Education.interfaces;
 using System;
 
