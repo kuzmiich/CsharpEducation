@@ -31,12 +31,15 @@ namespace Education.classes.Advanced.Linq
                 "12.All(bool) - проверяет, соответствует ли все элементы некоторому условию\n" +
                 "13.Any(bool) - хотя бы 1 элемент содержится в этой коллекции\n" +
                 "14.Contains(bool) - проверяет, содержится ли некоторый элемент в коллекции\n" +
-                "15.First(), Last(), Min(), Max(), Sum(), Aggregate - преобразует коллекцию по заданному условию\n");
+                "15.Атомарные операции - Count(), First(), Last(), Min(), Max(), Sum(), Aggregate - преобразует коллекцию по заданному условию\n" +
+                "Они выполняются при определении запроса и их уже нельзя изменить изменением передаваемой коллекции.\n" +
+                "Также для получения необходимого типа есть операции ToList, ToArray, ToDictionary(), ToHashSet, ToLookup\n" +
+                "16.Использование делегатов(и анонимных делегатов) в качестве условия Linq запроса");
 
             // 1
             List<int> list1 = new List<int>() { 1, 2, 3, 4, 5, 11, 12 };
             var even = from i in list1
-                       where i % 2 == 0 && i > 10
+                       where i % 2 == 0 && i < 5
                        select i;
 
             Console.WriteLine($"Even numbers of list1 - {string.Join(" ", even)}");
@@ -149,13 +152,22 @@ namespace Education.classes.Advanced.Linq
             Console.WriteLine($"Is contain {value} in array - {isContain}");
 
             // 15
-            int[] numbers = { 1, 2, 3, 4, 5 };
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 8 };
             var aggregateNumbers = numbers.Aggregate((x, y) => x + y);
+            Console.WriteLine($"Result value - {aggregateNumbers}");
+
+            // 16
+            var numbersMoreTen = numbers.Where(MoreThanTen);
+            Console.WriteLine($"Is first element more 10 - {string.Join(' ', numbersMoreTen.FirstOrDefault())}");
+
+
+            Func<int, bool> MoreThanTen2 = delegate (int i) { return i > 10; };
+            var numbersMoreTen2 = numbers.Where(MoreThanTen2);
+            Console.WriteLine($"Is first element more 10 - {string.Join(' ', numbersMoreTen2.FirstOrDefault())}");
         }
-    }
-    class Phone
-    {
-        public string Name { get; set; }
-        public string Company { get; set; }
+        private static bool MoreThanTen(int i)
+        {
+            return i > 10;
+        }
     }
 }
