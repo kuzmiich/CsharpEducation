@@ -22,9 +22,9 @@ namespace Education.classes.Advanced.Linq
             int[] numbers = new int[] { -2, -1, 0, 1, 2, 4, 3, 5, 6, 7, 8, };
 
             var factorials = numbers.AsParallel()
-                    .Select(x => Factorial(x))
                     .AsOrdered()
-                    .AsUnordered();
+                    .Where(x => x > 0)
+                    .Select(x => Factorial(x));
             try
             {
                 factorials.ForAll(val => Console.WriteLine(val));

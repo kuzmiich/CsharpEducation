@@ -1,12 +1,12 @@
-using System;
 using Education.classes;
-using Education.classes.Basics;
 using Education.classes.Advanced;
 using Education.classes.Advanced.AdditionalFeaturesInOOP;
-using Education.classes.Advanced.Multithreading;
-using Education.classes.Basics.Delegate;
-using LibPeople = ClassLibrary.Base.Person;
 using Education.classes.Advanced.Linq;
+using Education.classes.Advanced.Multithreading;
+using Education.classes.Basics;
+using Education.classes.Basics.Delegate;
+using System;
+using LibPeople = ClassLibrary.Base.Person;
 
 namespace Education
 {
@@ -107,7 +107,7 @@ namespace Education
             CollectionTraining.OutTask();
             Console.WriteLine(LINE);
 
-            StringTraining.OutTask();
+            StringStringBuilderRegexTraining.OutTask();
             Console.WriteLine(LINE);
 
             AdditionalClassAndStructure.OutTask();
@@ -130,6 +130,10 @@ namespace Education
 
             ParallelLinqTraining.OutTask();
             Console.WriteLine(LINE);
+
+            ReflectionTraining.OutTask();
+            Console.WriteLine(LINE);
+
 
 
 

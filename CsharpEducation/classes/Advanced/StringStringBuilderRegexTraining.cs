@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace Education.classes.Advanced
 {
-    class StringTraining : ITask
+    class StringStringBuilderRegexTraining : ITask
     {
         public static void OutTask()
         {
