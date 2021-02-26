@@ -1,5 +1,4 @@
-﻿using static ClassLibrary.EmployedEducationalClases.DataAnalyzer;
-using Education.interfaces;
+﻿using Education.interfaces;
 using System;
 using System.Reflection;
 
@@ -34,7 +33,10 @@ namespace Education.classes.Advanced
                 "Свойство Namespace - возвращает название пространства имен, где определен тип\n" +
                 "Свойство IsClass - возвращает true, если тип представляет класс\n" +
                 "Свойство IsEnum - возвращает true, если тип является перечислением\n" +
-                "Свойство IsInterface - возвращает true, если тип представляет интерфейс\n");
+                "Свойство IsInterface - возвращает true, если тип представляет интерфейс\n" +
+                "3.Позднее связывание и класс System.Activator\n" +
+                "4.Создание атрибутов\n" +
+                "Данный класс использует рефликсию в своих методах");
 
             // 1
             string filePath = @"./ClassLibrary.dll";
@@ -56,13 +58,31 @@ namespace Education.classes.Advanced
             //GetTypeInfo(asmType);
 
             // 2
-            Type type = Type.GetType("ClassLibrary.EmployedEducationalClases.DataAnalyzer, ClassLibrary", false, true);
+            Type type = Type.GetType("ClassLibrary.EmployedEducationalClases.DataAnalyzer, ClassLibrary", true, true);
             Console.WriteLine("Информация о классе DataAnalyzer из ClassLibrary");
             GetTypeInfo(type);
+
+            // 3
+            object obj = Activator.CreateInstance(type);
+            MethodInfo privateMethod = type.GetMethod("isValid", BindingFlags.Instance | BindingFlags.NonPublic);
+            MethodInfo publicMethod = type.GetMethod("IsFloatNumber");
+            char symbol = 'x';
+            object isValid = privateMethod?.Invoke(obj, new object[] { symbol });
+            Console.WriteLine($"Is {symbol} float number - {isValid}");
+            string number = "5.63";
+            object isFloatNumber = publicMethod?.Invoke(obj, new object[] { number });
+            Console.WriteLine($"Is {number} float number - {isFloatNumber}");
+
+            // 4
+            User2 eugene = new User2("Eugene", 19);
+            User2 artem = new User2("Artem", 1323);
+
+            Console.WriteLine($"Is Artem validate - {ValidateUser(artem)}");
+
+            Console.WriteLine($"Is Evgene validate - {ValidateUser(eugene)}");
         }
         private static void GetTypeInfo(Type type)
         {
-
             Console.WriteLine("Участники типа:");
             foreach (MemberInfo memberInfo in type.GetMembers())
             {
@@ -111,5 +131,48 @@ namespace Education.classes.Advanced
             }
             Console.WriteLine(")");
         }
+        private static bool ValidateUser(User2 user)
+        {
+            Type type = typeof(User2);
+            object[] attrs = type.GetCustomAttributes(false);
+            foreach (AgeValidationAttribute attr in attrs)
+            {
+                if (user.Age >= attr.Age && user.Age < 121) 
+                    return true;
+                else 
+                    return false;
+            }
+            return true;
+        }
+    }
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
+    public class AgeValidationAttribute : Attribute
+    {
+        public int Age { get; set; }
+
+        public AgeValidationAttribute()
+        { }
+
+        public AgeValidationAttribute(int age)
+        {
+            Age = age;
+        }
+    }
+    [AgeValidation(18)]
+    public class User2
+    {
+        public User2()
+        {
+        }
+
+        public User2(string n, int a)
+        {
+            Name = n;
+            Age = a;
+        }
+
+        public string Name { get; set; }
+        public int Age { get; set; }
+
     }
 }

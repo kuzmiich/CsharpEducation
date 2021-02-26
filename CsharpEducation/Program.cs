@@ -134,6 +134,8 @@ namespace Education
             ReflectionTraining.OutTask();
             Console.WriteLine(LINE);
 
+            DynamicTraining.OutTask();
+            Console.WriteLine(LINE);
 
 
 

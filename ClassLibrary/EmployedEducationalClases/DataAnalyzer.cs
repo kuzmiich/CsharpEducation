@@ -2,7 +2,7 @@
 
 namespace ClassLibrary.EmployedEducationalClases
 {
-    public class DataAnalyzer
+    class DataAnalyzer
     {
         public DataAnalyzer()
         {
@@ -18,17 +18,6 @@ namespace ClassLibrary.EmployedEducationalClases
         public string OperationName { get; }
         private readonly string _data;
 
-        public bool IsFloatNumber(string data)
-        {
-            for (int i = 0; i < data.Length; i++)
-            {
-                if (!isValid(data[i]))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
         public float[] ConvertToFloatNumber(string data, char separator)
         {
             var arrString = data.Split(separator);
@@ -41,6 +30,17 @@ namespace ClassLibrary.EmployedEducationalClases
                 }
             }
             return arrNumbers;
+        }
+        public bool IsFloatNumber(string data)
+        {
+            for (int i = 0; i < data.Length; i++)
+            {
+                if (!isValid(data[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
         private bool isValid(char c)
         {
