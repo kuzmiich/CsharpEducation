@@ -137,12 +137,13 @@ namespace Education
             DynamicTraining.OutTask();
             Console.WriteLine(LINE);
 
-
-
-            OOP_PrincipleTraining.OutOOP_Principles();
+            GCTraining.OutTask();
             Console.WriteLine(LINE);
 
-            SolidPrinciple.OutSolidPrinceples();
+            OOP_PrincipleTraining.OutOOP_Pillars();
+            Console.WriteLine(LINE);
+
+            SolidPrinciple.OutSolidPrinciples();
             Console.WriteLine(LINE);
         }
         static char[] GetLine(int length, char separator)

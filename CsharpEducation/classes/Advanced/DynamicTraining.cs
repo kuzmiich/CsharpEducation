@@ -51,7 +51,7 @@ namespace Education.classes.Advanced
             // 3
             ScriptEngine engine = Python.CreateEngine();
             ScriptScope scope = engine.CreateScope();
-            string pythonFilePath = @"C:\Users\ivank\source\repos\CsharpEducation\CsharpEducation\classes\Advanced\pyhonExtention\hello.py";
+            string pythonFilePath = @"C:\Users\ivank\source\repos\CsharpEducation\CsharpEducation\classes\Advanced\python\hello.py";
             engine.Execute("print 'hello, world'");
 
             engine.ExecuteFile(pythonFilePath, scope);

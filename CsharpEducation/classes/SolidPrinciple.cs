@@ -8,7 +8,7 @@ namespace Education.classes
 {
     public sealed class SolidPrinciple
     {
-        public static void OutSolidPrinceples()
+        public static void OutSolidPrinciples()
         {
             Dictionary<string, string> solidPrinceplesDict = new() {
                 {

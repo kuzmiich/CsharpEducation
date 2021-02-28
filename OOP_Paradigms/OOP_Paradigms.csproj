@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="GeneratingPatterns\AbstractFactory\" />
+    <Folder Include="GeneratingPatterns\Builder\" />
+    <Folder Include="GeneratingPatterns\Prototype\" />
+    <Folder Include="GeneratingPatterns\Singleton\" />
+    <Folder Include="PatternsOfBehavior\Command\" />
+    <Folder Include="PatternsOfBehavior\Iterator\" />
+    <Folder Include="PatternsOfBehavior\ChainOfResposibility\" />
+    <Folder Include="PatternsOfBehavior\Interpreter\" />
+    <Folder Include="PatternsOfBehavior\Mediator\" />
+    <Folder Include="PatternsOfBehavior\Memento\" />
+    <Folder Include="PatternsOfBehavior\Visitor\" />
+    <Folder Include="PatternsOfBehavior\State\" />
+    <Folder Include="PatternsOfBehavior\TemplateMethod\" />
+    <Folder Include="PatternsOfBehavior\Observer\" />
+    <Folder Include="PatternsOfBehavior\Strategy\" />
+    <Folder Include="StructuralPatterns\Decorator\" />
+    <Folder Include="StructuralPatterns\Adapter\" />
+    <Folder Include="StructuralPatterns\Facede\" />
+    <Folder Include="StructuralPatterns\Composite\" />
+    <Folder Include="StructuralPatterns\Deputy\" />
+    <Folder Include="StructuralPatterns\Flyweight\" />
+  </ItemGroup>
+
+</Project>

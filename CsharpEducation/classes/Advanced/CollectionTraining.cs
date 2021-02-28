@@ -176,9 +176,14 @@ namespace Education.classes.Advanced
             return days.GetEnumerator();
         }
     }
-    class User
+    class User : IDisposable
     {
         public string Name { get; set; }
+
+        public void Dispose()
+        {
+            Console.WriteLine("Disposed");
+        }
     }
     class Book
     {
