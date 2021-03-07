@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OOP_Paradigms.GeneratingPatterns.FactorMethod
+﻿namespace OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct
 {
     abstract class House
     { 

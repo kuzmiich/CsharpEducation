@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct;
 
-namespace OOP_Paradigms.GeneratingPatterns.FactorMethod
+namespace OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseCreator
 {
     // абстрактный класс строительной компании
-    abstract class Developer
+    abstract class Creator
     {
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
-        public Developer(string n)
+        public Creator(string name)
         {
-            Name = n;
+            Name = name;
         }
         // фабричный метод
         abstract public House Create();

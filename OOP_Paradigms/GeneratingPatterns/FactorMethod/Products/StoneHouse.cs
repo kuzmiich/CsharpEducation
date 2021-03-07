@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct;
+using System;
 
 namespace OOP_Paradigms.GeneratingPatterns.FactorMethod.Products
 {
-    class StoneHouse
+    class StoneHouse : House
     {
+        public StoneHouse()
+        {
+            Console.WriteLine("Каменный дом построен");
+        }
     }
 }

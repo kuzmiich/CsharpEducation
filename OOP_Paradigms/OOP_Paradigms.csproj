@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="GeneratingPatterns\AbstractFactory\" />
-    <Folder Include="GeneratingPatterns\Builder\" />
-    <Folder Include="GeneratingPatterns\Prototype\" />
-    <Folder Include="GeneratingPatterns\Singleton\" />
     <Folder Include="PatternsOfBehavior\Command\" />
     <Folder Include="PatternsOfBehavior\Iterator\" />
     <Folder Include="PatternsOfBehavior\ChainOfResposibility\" />
