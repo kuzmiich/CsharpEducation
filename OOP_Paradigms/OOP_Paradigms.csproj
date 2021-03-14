@@ -16,7 +16,6 @@
     <Folder Include="PatternsOfBehavior\State\" />
     <Folder Include="PatternsOfBehavior\TemplateMethod\" />
     <Folder Include="PatternsOfBehavior\Observer\" />
-    <Folder Include="PatternsOfBehavior\Strategy\" />
     <Folder Include="StructuralPatterns\Decorator\" />
     <Folder Include="StructuralPatterns\Adapter\" />
     <Folder Include="StructuralPatterns\Facede\" />

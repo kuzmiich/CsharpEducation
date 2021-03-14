@@ -2,6 +2,7 @@
 using OOP_Paradigms.GeneratingPatterns.FactorMethod;
 using OOP_Paradigms.GeneratingPatterns.Prototype;
 using OOP_Paradigms.GeneratingPatterns.Singleton;
+using OOP_Paradigms.PatternsOfBehavior.Strategy;
 using System;
 
 namespace OOP_Paradigms
@@ -11,27 +12,56 @@ namespace OOP_Paradigms
         static void Main(string[] args)
         {
             Console.WriteLine(
-                "Порождающие паттерны:\n" +
+                "Порождающие паттерны(Generating patterns):\n" +
                 "-Factory method\n" +
                 "-Abstract factory\n" +
                 "-Singletone\n" +
                 "-Prototype\n" +
-                "-Builder");
-            LaunchAbstractMethod factoryMethod = new LaunchAbstractMethod();
-            LaunchAbstractMethod abstractFactory = new LaunchAbstractMethod();
-            LaunchSingleton singletone = new LaunchSingleton();
-            LaunchPrototype prototype = new LaunchPrototype();
-            LaunchBuilder builder = new LaunchBuilder();
+                "-Builder\n" +
+                $"{string.Empty.PadLeft(50, '-')}\n" +
+                "Паттерны поведения(PatternsOfBehavior):\n" +
+                "Strategy\n" +
+                "Observer\n" +
+                "Command\n" +
+                "Template method\n" +
+                "Iterator\n" +
+                "State\n" +
+                "Chain of resposibility\n" +
+                "Interpreter\n" +
+                "Memento\n" +
+                "Visitor\n" +
+                $"{string.Empty.PadLeft(50, '-')}\n" +
+                "Структурные паттерны:\n" +
+                "Decorator\n" +
+                "Adapter\n" +
+                "Facede\n" +
+                "Composite\n" +
+                "Deputy\n" +
+                "Bridge\n" +
+                "Flyweight\n" +
+                $"{string.Empty.PadLeft(50, '-')}\n");
 
-            factoryMethod.OutPatternInfo();
+            ILaunchPattern[] patternArray =
+            {
+                new LaunchFactoryMethod(),
+                new LaunchAbstractFactory(),
+                new LaunchSingleton(),
+                new LaunchPrototype(),
+                new LaunchBuilder(),
+                new LaunchStrategy(),
+            };
 
-            abstractFactory.OutPatternInfo();
-
-            singletone.OutPatternInfo();
-
-            prototype.OutPatternInfo();
-
-            builder.OutPatternInfo();
+            try
+            {
+                foreach (var pattern in patternArray)
+                {
+                    pattern.OutPatternInfo();
+                }
+            }
+            catch(ApplicationException ex)
+            {
+                Console.WriteLine($"Error, {ex}");
+            }
         }
     }
 }

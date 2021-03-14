@@ -3,14 +3,13 @@ using OOP_Paradigms.GeneratingPatterns.Builder.Creator;
 using OOP_Paradigms.GeneratingPatterns.Builder.Product;
 using OOP_Paradigms.GeneratingPatterns.Builder.ProductBuilder;
 using OOP_Paradigms.GeneratingPatterns.Builder.ProductBuilder.VariousBreadBuilder;
-using OOP_Paradigms.GeneratingPatterns.FactorMethod;
 using System;
 
 namespace OOP_Paradigms.GeneratingPatterns.Builder
 {
-    class LaunchBuilder : LaunchPattern
+    class LaunchBuilder : ILaunchPattern
     {
-        public override void OutPatternInfo()
+        public void OutPatternInfo()
         {
             Console.WriteLine(
                 "Когда использовать паттерн Builder\n" +

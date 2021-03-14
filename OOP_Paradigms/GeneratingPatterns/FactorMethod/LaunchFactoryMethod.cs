@@ -5,9 +5,9 @@ using System;
 
 namespace OOP_Paradigms.GeneratingPatterns.FactorMethod
 {
-    class LaunchFactoryMethod : LaunchPattern
+    class LaunchFactoryMethod : ILaunchPattern
     {
-        public override void OutPatternInfo()
+        public void OutPatternInfo()
         {
             Console.WriteLine(
                 "Когда нужно использовать паттерн фабричный метод:\n" +

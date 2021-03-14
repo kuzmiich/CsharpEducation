@@ -5,9 +5,9 @@ using System;
 
 namespace OOP_Paradigms.GeneratingPatterns.FactorMethod
 {
-    class LaunchAbstractMethod : LaunchPattern
+    class LaunchAbstractFactory : ILaunchPattern
     {
-        public override void OutPatternInfo()
+        public void OutPatternInfo()
         {
             Console.WriteLine(
                 "Когда нужно использовать паттерн абстрактный метод:\n" +

@@ -1,13 +1,12 @@
-﻿using OOP_Paradigms.GeneratingPatterns.FactorMethod;
-using OOP_Paradigms.GeneratingPatterns.Prototype.BasePrototype;
+﻿using OOP_Paradigms.GeneratingPatterns.Prototype.BasePrototype;
 using OOP_Paradigms.GeneratingPatterns.Prototype.Figure;
 using System;
 
 namespace OOP_Paradigms.GeneratingPatterns.Prototype
 {
-    class LaunchPrototype : LaunchPattern
+    class LaunchPrototype : ILaunchPattern
     {
-        public override void OutPatternInfo()
+        public void OutPatternInfo()
         {
             Console.WriteLine(
                 "Когда нужно использовать паттерн прототип\n" +

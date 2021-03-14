@@ -58,6 +58,9 @@ namespace Education.classes.Advanced
             dynamic function = scope.GetVariable("hello");
             function();
 
+            dynamic getArrayList = scope.GetVariable("get_array_list");
+            var list = getArrayList();
+            Console.WriteLine(string.Join(' ', list));
         }
 
         private static void OutInfo(dynamic variable)
