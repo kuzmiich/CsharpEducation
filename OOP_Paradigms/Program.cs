@@ -3,6 +3,7 @@ using OOP_Paradigms.GeneratingPatterns.FactorMethod;
 using OOP_Paradigms.GeneratingPatterns.Prototype;
 using OOP_Paradigms.GeneratingPatterns.Singleton;
 using OOP_Paradigms.PatternsOfBehavior.Strategy;
+using OOP_Patterns.PatternsOfBehavior.Observer;
 using System;
 
 namespace OOP_Paradigms
@@ -49,6 +50,7 @@ namespace OOP_Paradigms
                 new LaunchPrototype(),
                 new LaunchBuilder(),
                 new LaunchStrategy(),
+                new LaunchObserver(),
             };
 
             try

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Education", "CsharpEducation\Education.csproj", "{D59B6C56-756F-4E03-998F-2ECDA8E29290}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_Paradigms", "OOP_Paradigms\OOP_Paradigms.csproj", "{B2FC7780-0E96-4033-A5ED-F5621AD6A04F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_Patterns", "OOP_Paradigms\OOP_Patterns.csproj", "{B2FC7780-0E96-4033-A5ED-F5621AD6A04F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OOP_Patterns.PatternsOfBehavior.Observer.Component.News">
+    <Position X="3.25" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAEAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PatternsOfBehavior\Observer\Component\News.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="OOP_Patterns.PatternsOfBehavior.Observer.ObserverInterface.IObserver&lt;T&gt;">
+    <Position X="9.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PatternsOfBehavior\Observer\ObserverInterface\IObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OOP_Patterns.PatternsOfBehavior.Observer.ObserverInterface.IObservable&lt;TSourse&gt;">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAA=</HashCode>
+      <FileName>PatternsOfBehavior\Observer\ObserverInterface\IObservable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
