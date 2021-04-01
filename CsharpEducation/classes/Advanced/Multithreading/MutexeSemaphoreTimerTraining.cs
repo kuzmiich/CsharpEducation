@@ -1,11 +1,9 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Education.classes.Advanced.Multithreading
 {
-    class MutexeSemaphoreTimerTraining : ITask
+    class MutexeSemaphoreTimerTraining
     {
         private static Mutex _mutex = new Mutex();
         public static void OutTask()

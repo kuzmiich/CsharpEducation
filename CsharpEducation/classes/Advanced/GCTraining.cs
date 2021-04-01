@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Advanced
 {
-    class GCTraining : ITask
+    class GCTraining
     {
         public static void OutTask()
         {

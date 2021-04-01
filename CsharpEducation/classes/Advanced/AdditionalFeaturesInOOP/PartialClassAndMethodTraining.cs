@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Advanced.AdditionalFeaturesInOOP
 {
-    class PartialClassAndMethodTraining : ITask
+    class PartialClassAndMethodTraining
     {
         public static void OutTask()
         {
@@ -17,7 +16,7 @@ namespace Education.classes.Advanced.AdditionalFeaturesInOOP
                 "Хотя допустимы static partial методы.\n" +
                 "В partial методах не допустима использование out ссылок" 
             );
-            Person oleg = new Person();
+            Person oleg = new();
             oleg.Eat();
             oleg.Move();
             Person.DoSomething();

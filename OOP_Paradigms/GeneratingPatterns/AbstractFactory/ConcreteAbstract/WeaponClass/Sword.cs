@@ -3,9 +3,9 @@ using System;
 
 namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.WeaponClass
 {
-    class Sword : Weapon
+    class Sword : IWeapon
     {
-        public override void Hit()
+        public void Hit()
         {
             Console.WriteLine("Бьем мечом");
         }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.AbstractProduct
 {
-    abstract class Weapon
+    interface IMovement
     {
-        public abstract void Hit();
+        void Move();
     }
 }

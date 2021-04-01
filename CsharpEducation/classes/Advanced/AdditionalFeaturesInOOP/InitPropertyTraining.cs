@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Advanced.AdditionalFeaturesInOOP
 {
-    class InitPropertyTraining : ITask
+    class InitPropertyTraining
     {
         public static void OutTask()
         {
@@ -12,12 +11,12 @@ namespace Education.classes.Advanced.AdditionalFeaturesInOOP
                 "использовать только конструктор или инициализатор\n"
             );
 
-            Dog dog = new Dog(2, "");
+            Dog dog = new(2, "");
             //dog.Name = "value";
 
-            Dog dog1 = new Dog(3, "") { Name = "Rocks" };
+            Dog dog1 = new(3, "") { Name = "Rocks" };
 
-            Dog dog2 = new Dog(5, "erk");
+            Dog dog2 = new(5, "erk");
         }
     }
     class Dog

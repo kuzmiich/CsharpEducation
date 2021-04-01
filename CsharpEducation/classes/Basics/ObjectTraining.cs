@@ -1,11 +1,10 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using x = System.Reflection.BindingFlags;
 using y = System.Reflection.FieldAttributes;
 
 namespace Education.classes.Basics
 {
-    class ObjectTraining : ITask
+    class ObjectTraining
     {
         public static void OutTask()
         {

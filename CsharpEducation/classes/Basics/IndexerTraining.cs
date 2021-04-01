@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics
 {
-    class IndexerTraining : ITask
+    class IndexerTraining
     {
         public static void OutTask()
         {

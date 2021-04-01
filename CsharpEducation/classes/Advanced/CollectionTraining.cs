@@ -1,5 +1,4 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -9,7 +8,7 @@ using System.Linq;
 
 namespace Education.classes.Advanced
 {
-    class CollectionTraining : ITask
+    class CollectionTraining
     {
         public static void OutTask()
         {

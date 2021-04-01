@@ -1,5 +1,5 @@
 ﻿using OOP_Paradigms.GeneratingPatterns.AbstractFactory.Client;
-using OOP_Paradigms.GeneratingPatterns.AbstractFactory.Factory;
+using OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteFactory;
 using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct;
 using System;
 

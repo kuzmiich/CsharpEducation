@@ -1,10 +1,9 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Globalization;
 
 namespace Education.classes.Advanced
 {
-    class AdditionalClassAndStructure : ITask
+    class AdditionalClassAndStructure
     {
         public static void OutTask()
         {

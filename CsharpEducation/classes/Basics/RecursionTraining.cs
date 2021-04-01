@@ -1,10 +1,9 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Threading;
 
 namespace Education.classes.Basics
 {
-    class RecursionTraining : ITask
+    class RecursionTraining
     {
         public static void OutTask()
         {

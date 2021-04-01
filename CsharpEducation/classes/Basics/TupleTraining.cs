@@ -1,5 +1,4 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Linq;
 
 namespace Education.classes.Basics
@@ -7,7 +6,7 @@ namespace Education.classes.Basics
     /// <summary>
     /// Tuple training class
     /// </summary>
-    class TupleTraining : ITask
+    class TupleTraining
     {
         public static void OutTask()
         {

@@ -1,10 +1,9 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Reflection;
 
 namespace Education.classes.Advanced
 {
-    class ReflectionTraining : ITask
+    class ReflectionTraining
     {
         public static void OutTask()
         {

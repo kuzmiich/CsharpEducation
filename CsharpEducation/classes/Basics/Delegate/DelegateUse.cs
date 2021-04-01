@@ -1,10 +1,9 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using Account = ClassLibrary.EmployedEducationalClases.Account;
 
 namespace Education.classes.Basics.Delegate
 {
-    class DelegateUse : ITask
+    class DelegateUse
     {
         public static void OutTask()
         {

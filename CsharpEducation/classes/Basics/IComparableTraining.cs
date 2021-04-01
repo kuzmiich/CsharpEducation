@@ -1,11 +1,9 @@
-﻿using Education.interfaces;
-using System;
-using System.Collections;
+﻿using System;
 using System.Linq;
 
 namespace Education.classes.Basics
 {
-    class IComparableTraining : ITask
+    class IComparableTraining
     {
         public static void OutTask()
         {

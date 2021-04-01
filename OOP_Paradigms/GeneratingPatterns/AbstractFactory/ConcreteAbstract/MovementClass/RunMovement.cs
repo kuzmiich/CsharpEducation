@@ -3,9 +3,9 @@ using System;
 
 namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass
 {
-    class RunMovement : Movement
+    class RunMovement : IMovement
     {
-        public override void Move()
+        public void Move()
         {
             Console.WriteLine("Бежим");
         }

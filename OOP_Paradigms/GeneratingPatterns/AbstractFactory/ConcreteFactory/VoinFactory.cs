@@ -3,19 +3,18 @@ using OOP_Paradigms.GeneratingPatterns.AbstractFactory.BaseFactory;
 using OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass;
 using OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.WeaponClass;
 
-namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.Factory
+namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteFactory
 {
-    // Фабрика создания героя с луком
-    class ArcherFactory : HeroFactory
+    class VoinFactory : HeroFactory
     {
-        public override Movement CreateMovement()
+        public override IMovement CreateMovement()
         {
-            return new RunMovement();
+            return new GoMovement();
         }
 
-        public override Weapon CreateWeapon()
+        public override IWeapon CreateWeapon()
         {
-            return new Archer();
+            return new Sword();
         }
     }
 }

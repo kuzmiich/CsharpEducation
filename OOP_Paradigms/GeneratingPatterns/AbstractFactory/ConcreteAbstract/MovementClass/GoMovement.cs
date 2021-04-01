@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass
 {
-    class GoMovement : Movement
+    class GoMovement : IMovement
     {
-        public override void Move()
+        public void Move()
         {
             Console.WriteLine("Идем");
         }

@@ -1,12 +1,10 @@
-﻿using ClassLibrary;
-using ClassLibrary.Base;
+﻿using ClassLibrary.Base;
 using ClassLibrary.EmployedEducationalClases;
-using Education.interfaces;
 using System;
 
 namespace Education.classes.Basics.Delegate
 {
-    class DelegateEventTraining : ITask
+    class DelegateEventTraining
     {
         public static void OutTask()
         {

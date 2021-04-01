@@ -1,5 +1,4 @@
-﻿using Education.interfaces;
-using IronPython.Hosting;
+﻿using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 using System;
 using System.Collections.Generic;
@@ -7,7 +6,7 @@ using System.Dynamic;
 
 namespace Education.classes.Advanced
 {
-    class DynamicTraining : ITask
+    class DynamicTraining
     {
         public static void OutTask()
         {

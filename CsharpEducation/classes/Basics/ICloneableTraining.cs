@@ -1,15 +1,9 @@
-﻿using ClassLibrary;
-using ClassLibrary.Base;
-using Education.interfaces;
+﻿using ClassLibrary.Base;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Education.classes.Basics
 {
-    class ICloneableTraining : ITask
+    class ICloneableTraining
     {
         public static void OutTask()
         {

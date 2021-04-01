@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education
 {
-    class OOP_PrincipleTraining : ITask
+    class OOP_PrincipleTraining
     {
         public static void OutOOP_Pillars()
         {

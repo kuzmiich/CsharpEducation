@@ -3,9 +3,9 @@ using System;
 
 namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass
 {
-    class FlyMovement : Movement
+    class FlyMovement : IMovement
     {
-        public override void Move()
+        public void Move()
         {
             Console.WriteLine("Летим");
         }

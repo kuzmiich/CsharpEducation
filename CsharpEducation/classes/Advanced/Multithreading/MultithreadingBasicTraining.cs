@@ -1,11 +1,10 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Education.classes.Advanced.Multithreading
 {
-    class MultithreadingBasicTraining : ITask
+    class MultithreadingBasicTraining
     {
         private static AutoResetEvent _waitHandler = new AutoResetEvent(true);
         private static object _syncLocker = new object();

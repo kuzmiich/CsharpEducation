@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics
 {
-    class ConstAndReadonlyTraining : ITask
+    class ConstAndReadonlyTraining
     {
         public static void OutTask()
         {

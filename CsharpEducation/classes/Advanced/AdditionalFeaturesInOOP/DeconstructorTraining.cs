@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Advanced.AdditionalFeaturesInOOP
 {
-    class DeconstructorTraining : ITask
+    class DeconstructorTraining
     {
         public static void OutTask()
         {

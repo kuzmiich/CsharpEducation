@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics.Delegate
 {
-    class DelegateActionPredicateFunc : ITask
+    class DelegateActionPredicateFunc
     {
         public delegate void Action<T>(T value1);
         //public delegate void Action<T>(T value1, T value2);

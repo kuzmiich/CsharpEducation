@@ -1,10 +1,9 @@
 ﻿using Education.classes.Basics.Delegate;
-using Education.interfaces;
 using System;
 
 namespace Education.classes.Basics
 {
-    class NullTraining : ITask
+    class NullTraining
     {
         public static void OutTask()
         {

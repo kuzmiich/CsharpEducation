@@ -1,13 +1,8 @@
-﻿using Education.interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace Education.classes.Advanced
 {
-    class ExtensionMethodTraining : ITask
+    class ExtensionMethodTraining
     {
         public static void OutTask()
         {

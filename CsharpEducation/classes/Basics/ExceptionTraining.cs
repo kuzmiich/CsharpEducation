@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics
 {
-    class ExceptionTraining : ITask
+    class ExceptionTraining
     {
         public static void OutTask()
         {

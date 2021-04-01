@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics
 {
-    class ParamsTraining : ITask
+    class ParamsTraining
     {
         public static void OutTask()
         {

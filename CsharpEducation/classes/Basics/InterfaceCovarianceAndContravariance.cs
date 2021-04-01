@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics
 {
-    class InterfaceCovarianceAndContravariance : ITask
+    class InterfaceCovarianceAndContravariance
     {
         public static void OutTask()
         {

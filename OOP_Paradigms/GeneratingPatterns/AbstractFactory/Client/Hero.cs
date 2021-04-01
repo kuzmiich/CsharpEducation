@@ -10,8 +10,9 @@ namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.Client
 {
     class Hero
     {
-        private readonly Weapon _weapon;
-        private readonly Movement _movement;
+        private readonly IWeapon _weapon;
+        private readonly IMovement _movement;
+
         public Hero(HeroFactory factory)
         {
             _weapon = factory.CreateWeapon();

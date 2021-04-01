@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics.Delegate
 {
-    class DelegateCovarianceContravarianceTraining : ITask
+    class DelegateCovarianceContravarianceTraining
     {
         delegate UnitTest TestGenerator(uint name, string testCondition, string answer);
         delegate void TestClassInfo(TestClass testClass);

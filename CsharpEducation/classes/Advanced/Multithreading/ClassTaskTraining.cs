@@ -1,12 +1,11 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Education.classes.Advanced.Multithreading
 {
-    class ClassTaskTraining : ITask
+    class ClassTaskTraining
     {
         public static void OutTask()
         {

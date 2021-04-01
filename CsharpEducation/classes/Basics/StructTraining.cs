@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics
 {
-    class StructTraining : ITask
+    class StructTraining
     {
         public static void OutTask()
         {

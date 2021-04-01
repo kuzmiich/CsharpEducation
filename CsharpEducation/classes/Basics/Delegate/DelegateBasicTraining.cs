@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics.Delegate
 {
-    class DelegateBasicTraining : ITask
+    class DelegateBasicTraining
     {
         delegate void Message();
         internal delegate T Operation<T, K>(K value);

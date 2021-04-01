@@ -1,13 +1,12 @@
 ﻿using ClassLibrary.Base;
 using ClassLibrary.Logic;
-using Education.interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Education.classes.Advanced.Linq
 {
-    class LinqTraining : ITask
+    class LinqTraining
     {
         public static void OutTask()
         {
@@ -46,7 +45,7 @@ namespace Education.classes.Advanced.Linq
             Console.WriteLine($"Even numbers of list1 - {string.Join(" ", even)}");
 
             // 2
-            List<Phone> phones = new List<Phone>
+            List<Phone> phones = new()
             {
                 new Phone {Name="Lumia 430", Company="Microsoft" },
                 new Phone {Name="Mi 5", Company="Xiaomi" },

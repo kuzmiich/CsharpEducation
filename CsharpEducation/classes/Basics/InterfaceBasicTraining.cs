@@ -1,11 +1,10 @@
 ﻿using ClassLibrary.EmployedEducationalClases;
-using Education.interfaces;
 using System;
 using CLClient = ClassLibrary.EmployedEducationalClases.Client;
 
 namespace Education.classes.Basics
 {
-    class InterfaceBasicTraining : ITask, IFoo, IBar
+    class InterfaceBasicTraining : IFoo, IBar
     {
         public static void OutTask() 
         {

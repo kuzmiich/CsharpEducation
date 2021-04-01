@@ -1,5 +1,4 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Education.classes.Advanced.Multithreading
 {
-    class AsyncTraining : ITask
+    class AsyncTraining
     {
         public async static void OutTask()
         {

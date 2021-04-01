@@ -2,7 +2,7 @@
 {
     class OS
     {
-        private static object syncRoot = new object();
+        private static readonly object syncRoot = new object();
         private static OS instance;
 
         public string Name { get; private set; }

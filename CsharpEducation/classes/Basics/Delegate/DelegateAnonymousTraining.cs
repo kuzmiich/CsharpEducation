@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics.Delegate
 {
-    class DelegateAnonymousTraining : ITask
+    class DelegateAnonymousTraining
     {
         delegate void MessageHandler(string mes);
         delegate long Operation(int x, int y);

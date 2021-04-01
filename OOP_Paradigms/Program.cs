@@ -10,7 +10,7 @@ namespace OOP_Paradigms
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine(
                 "Порождающие паттерны(Generating patterns):\n" +

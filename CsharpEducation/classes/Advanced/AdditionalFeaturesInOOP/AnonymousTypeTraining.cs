@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Advanced.AdditionalFeaturesInOOP
 {
-    class AnonymousTypeTraining : ITask
+    class AnonymousTypeTraining
     {
         public static void OutTask()
         {

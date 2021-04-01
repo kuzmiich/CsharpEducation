@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics
 {
-    class TypeConversionTraining : ITask
+    class TypeConversionTraining
     {
         public static void OutTask()
         {

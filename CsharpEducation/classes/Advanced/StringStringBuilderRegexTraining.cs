@@ -1,11 +1,10 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Education.classes.Advanced
 {
-    class StringStringBuilderRegexTraining : ITask
+    class StringStringBuilderRegexTraining
     {
         public static void OutTask()
         {

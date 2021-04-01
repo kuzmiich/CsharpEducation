@@ -1,10 +1,9 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using static ClassLibrary.Logic.Sorting;
 
 namespace Education.classes.Basics
 {
-    class GeneralizationTraining : ITask
+    class GeneralizationTraining
     {
         public static void OutTask()
         {

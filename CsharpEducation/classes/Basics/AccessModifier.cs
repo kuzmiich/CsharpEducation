@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Basics
 {
-    class AccessModifier : ITask
+    class AccessModifier
     {
         public static void OutTask()
         {

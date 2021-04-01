@@ -1,9 +1,8 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 
 namespace Education.classes.Advanced.AdditionalFeaturesInOOP
 {
-    class PatternMatchingTraining : ITask
+    class PatternMatchingTraining
     {
         public static void OutTask()
         {
