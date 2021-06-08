@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrar
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Education", "CsharpEducation\Education.csproj", "{D59B6C56-756F-4E03-998F-2ECDA8E29290}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_Patterns", "OOP_Paradigms\OOP_Patterns.csproj", "{B2FC7780-0E96-4033-A5ED-F5621AD6A04F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP_Patterns", "OOP_Patterns\OOP_Patterns.csproj", "{7D34169F-6252-4589-9C58-E2B0CB5C9EAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{D59B6C56-756F-4E03-998F-2ECDA8E29290}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D59B6C56-756F-4E03-998F-2ECDA8E29290}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D59B6C56-756F-4E03-998F-2ECDA8E29290}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2FC7780-0E96-4033-A5ED-F5621AD6A04F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2FC7780-0E96-4033-A5ED-F5621AD6A04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2FC7780-0E96-4033-A5ED-F5621AD6A04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2FC7780-0E96-4033-A5ED-F5621AD6A04F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D34169F-6252-4589-9C58-E2B0CB5C9EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D34169F-6252-4589-9C58-E2B0CB5C9EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D34169F-6252-4589-9C58-E2B0CB5C9EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D34169F-6252-4589-9C58-E2B0CB5C9EAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
