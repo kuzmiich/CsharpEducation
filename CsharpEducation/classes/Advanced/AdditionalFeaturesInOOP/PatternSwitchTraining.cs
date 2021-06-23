@@ -74,7 +74,7 @@ namespace Education.classes.Advanced.AdditionalFeaturesInOOP
             ("Nikita", _, "evening") => $"Guten Abend, {info.Name}",
             (_, "admin", _) => "Hello, Admin",
             (var name, var status, var lang) => $"{name} not found,{status} undefined ,{lang} unknown",
-            _ => "Здрасьть"
+            _ => "Здрасте"
         };
         /// <summary>
         /// Relational patterns

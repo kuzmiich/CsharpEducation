@@ -21,15 +21,15 @@ namespace OOP_Patterns.PatternsOfBehavior.Observer
                 "-Когда существует один объект, рассылающий сообщения, и множество подписчиков, которые получают сообщения.\n" +
                 "При этом точное число подписчиков заранее неизвестно и процессе работы программы может изменяться.\n");
 
-            NewsAggregator sender = new NewsAggregator();
-            Admin admin = new Admin(
+            var sender = new NewsAggregator();
+            var admin = new Admin(
                 
             );
-            Manager manager = new Manager(0, "Manager");
-            User user = new User(1, "Vasya", "KTR", InterestingState.Interesting);
+            var manager = new Manager(0, "Manager");
+            var user = new User(1, "Vasya", "KTR", InterestingState.Interesting);
 
             // имитация торгов
-            News news = new News() 
+            var news = new News() 
             { 
                 Title= "Hello, this is Microsoft news", 
                 ShortDescription= "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,",
@@ -39,13 +39,13 @@ namespace OOP_Patterns.PatternsOfBehavior.Observer
                     "cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non" +
                     "proident,sunt in culpa qui officia deserunt mollit anim id est laborum."
             };
-            sender.RegisterUser(user);
-            sender.RemoveUser(manager);
+            /*sender.RegisterUser(user);
+            sender.RemoveUser(manager);*/
 
-            sender.NotifyUsers(news);
+            /*sender.NotifyUsers(news);
             news.LongDescription = "da";
             // имитация торгов
-            sender.NotifyUsers(news);
+            sender.NotifyUsers(news);*/
         }
     }
 }

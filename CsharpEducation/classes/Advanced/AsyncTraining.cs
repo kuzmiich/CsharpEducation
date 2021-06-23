@@ -101,11 +101,11 @@ namespace Education.classes.Advanced.Multithreading
 
         public virtual async Task HelloAsync()
         {
-            Task t1 = Task.Run(() => Hello());
-            Task t2 = Task.Run(() => Hello());
-            Task t3 = Task.Run(() => Hello());
+            var t1 = Task.Run(() => Hello());
+            var t2 = Task.Run(() => Hello());
+            var t3 = Task.Run(() => Hello());
             
-            await Task.WhenAll(new[] { t1, t2, t3 });
+            await Task.WhenAll(t1, t2, t3);
         }
 
         private static void Hello()
@@ -115,9 +115,9 @@ namespace Education.classes.Advanced.Multithreading
 
         public static void ReadFile(string path)
         {
-            DateTime time = DateTime.Now;
-            string buf = string.Empty;
-            using (StreamReader fin = new StreamReader(path))
+            var time = DateTime.Now;
+            var buf = string.Empty;
+            using (var fin = new StreamReader(path))
             {
                 if (fin == null)
                 {
@@ -130,9 +130,9 @@ namespace Education.classes.Advanced.Multithreading
         }
         public static async Task ReadFileAsync(string path)
         {
-            DateTime time = DateTime.Now;
-            string buf = string.Empty;
-            using (StreamReader fin = new StreamReader(path))
+            var time = DateTime.Now;
+            var buf = string.Empty;
+            using (var fin = new StreamReader(path))
             {
                 if (fin == null)
                 {

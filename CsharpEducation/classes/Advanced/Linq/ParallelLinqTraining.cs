@@ -1,11 +1,10 @@
-﻿using Education.interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Education.classes.Advanced.Linq
 {
-    class ParallelLinqTraining : ITask
+    class ParallelLinqTraining
     {
         public static void OutTask()
         {

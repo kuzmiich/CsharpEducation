@@ -72,7 +72,7 @@ namespace Education.classes.Advanced.Linq
                 }
             }
             // 3
-            List<int> list2 = new List<int>() { 6, 8, 10, 22 };
+            var list2 = new List<int>() { 6, 8, 10, 22 };
             var allList = list1.Zip(list2);
 
             foreach (var el in allList)

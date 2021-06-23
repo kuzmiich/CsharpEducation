@@ -5,6 +5,7 @@ using OOP_Paradigms.GeneratingPatterns.Singleton;
 using OOP_Paradigms.PatternsOfBehavior.Strategy;
 using OOP_Patterns.PatternsOfBehavior.Observer;
 using System;
+using System.Text;
 
 namespace OOP_Paradigms
 {

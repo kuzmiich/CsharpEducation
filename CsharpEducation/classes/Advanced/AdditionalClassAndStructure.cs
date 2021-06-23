@@ -32,7 +32,7 @@ namespace Education.classes.Advanced
             );
             
             // 1.DataTime
-            DateTime date = DateTime.Now;
+            var date = DateTime.Now;
             Console.WriteLine($"Month - {date.Month}"); 
 
             // 2.Lazy initialization

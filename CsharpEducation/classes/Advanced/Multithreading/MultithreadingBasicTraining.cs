@@ -78,7 +78,6 @@ namespace Education.classes.Advanced.Multithreading
             thread1.Start(); // запускаем поток
             Thread thread2 = new Thread(new ParameterizedThreadStart(Increment));
             thread2.Start(10);
-            Random rand = new Random();
 
             Console.WriteLine("Вывод для новых потоков:");
             // 1
