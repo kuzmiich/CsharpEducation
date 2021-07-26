@@ -1,7 +1,7 @@
 ﻿using System;
 using MVC.Model;
 
-namespace MVC.Controllers
+namespace MVC.Controller
 {
     public class CalculatorController
     {

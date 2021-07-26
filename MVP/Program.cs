@@ -18,7 +18,7 @@ namespace MVP
 
             // view send query to presenter
             // presenter send date to model and get result
-            var calculateResult = new CalculatorPresenter(new OutputService()).Calculate();
+            var calculateResult = new CalculatorPresenter(new InputService()).Calculate();
             // !end
 
             // without using events, the view refers to the model to receive data

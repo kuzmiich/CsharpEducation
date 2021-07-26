@@ -7,7 +7,7 @@ using MVP.View;
 
 namespace MVP.View
 {
-    public class OutputService : IView
+    public class InputService : IView
     {
         public decimal GetDecimal(string data) => decimal.TryParse(data, out var outData) ? outData : default;
 

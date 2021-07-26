@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MVC.Controllers;
+﻿using MVC.Controller;
+using System;
 
 namespace MVC
 {

@@ -10,15 +10,18 @@ namespace MVP.Presenter
         private readonly IView _viewService;
         private static readonly CalculatorService Model = new ();
 
-        public CalculatorPresenter(OutputService outputService)
+        public CalculatorPresenter(InputService inputService)
         {
-            _viewService = outputService ?? throw new ArgumentNullException(nameof(outputService));
+            _viewService = inputService ?? throw new ArgumentNullException(nameof(inputService));
         }
 
         public decimal Calculate()
         {
+            Console.Write("Input operation type: ");
             var operationType = _viewService.GetChar(Console.ReadLine());
+            Console.Write("Input first number: ");
             var first = _viewService.GetDecimal(Console.ReadLine());
+            Console.Write("Input second number: ");
             var second = _viewService.GetDecimal(Console.ReadLine());
 
             return operationType switch
