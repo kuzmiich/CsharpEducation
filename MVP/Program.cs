@@ -21,10 +21,8 @@ namespace MVP
             var calculateResult = new CalculatorPresenter(new InputService()).Calculate();
             // !end
 
-            // without using events, the view refers to the model to receive data
-
-            Console.WriteLine($"\n\nResult - {calculateResult:f2}");
             // user get result
+            Console.WriteLine($"\n\nResult - {calculateResult:f2}");
             // !end
         }
     }

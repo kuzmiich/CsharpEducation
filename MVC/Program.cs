@@ -10,7 +10,7 @@ namespace MVC
             // The user turned to the view
             Console.WriteLine("---------------Welcome to calculator-------------");
             Console.WriteLine("Input operation type (+, -, *, /):");
-            var operation = Convert.ToChar(Console.ReadLine() ?? string.Empty);
+            var operation = Convert.ToChar(Console.ReadLine());
             Console.Write("Input first number: ");
             var first = Convert.ToDecimal(Console.ReadLine());
             Console.Write("Input second number: ");
