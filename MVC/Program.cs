@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MVC.Controllers;
 
 namespace MVC
 {
@@ -22,7 +23,7 @@ namespace MVC
 
             // view send query to controller
             // controller updated model
-            var model = new Controller().InitModel(first, second);
+            var model = new CalculatorController().InitModel(first, second);
             // !end
 
             // without using events, the view refers to the model to receive data

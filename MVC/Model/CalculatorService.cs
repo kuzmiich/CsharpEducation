@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVC
+namespace MVC.Model
 {
-    public class Model
+    public class CalculatorService
     {
         public decimal A { get; set; }
         public decimal B { get; set; }
 
-        public Model(decimal a, decimal b)
+        public CalculatorService(decimal a, decimal b)
         {
             A = a;
             B = b;
