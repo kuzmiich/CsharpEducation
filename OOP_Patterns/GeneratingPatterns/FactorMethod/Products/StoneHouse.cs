@@ -1,7 +1,7 @@
-﻿using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct;
-using System;
+﻿using System;
+using DesignPatterns.GeneratingPatterns.FactorMethod.BaseProduct;
 
-namespace OOP_Paradigms.GeneratingPatterns.FactorMethod.Products
+namespace DesignPatterns.GeneratingPatterns.FactorMethod.Products
 {
     class StoneHouse : House
     {

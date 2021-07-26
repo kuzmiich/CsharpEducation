@@ -1,8 +1,8 @@
-﻿using OOP_Paradigms.PatternsOfBehavior.Strategy.BaseCar;
-using OOP_Paradigms.PatternsOfBehavior.Strategy.ConcreteArea.ConcreteCar;
-using System;
+﻿using System;
+using DesignPatterns.PatternsOfBehavior.Strategy.BaseCar;
+using DesignPatterns.PatternsOfBehavior.Strategy.ConcreteArea.ConcreteCar;
 
-namespace OOP_Paradigms.PatternsOfBehavior.Strategy
+namespace DesignPatterns.PatternsOfBehavior.Strategy
 {
     class LaunchStrategy : ILaunchPattern
     {
@@ -16,7 +16,7 @@ namespace OOP_Paradigms.PatternsOfBehavior.Strategy
                 "-Когда существует один объект, рассылающий сообщения, и множество подписчиков, которые получают сообщения.\n" +
                 "При этом точное число подписчиков заранее неизвестно и процессе работы программы может изменяться.");
 
-            Car auto = new Car(4, "Volvo", new MotoCar());
+            var auto = new Car(4, "Volvo", new MotoCar());
             auto.Move();
             auto.Movable = new Truck();
             auto.Move();

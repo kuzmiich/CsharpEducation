@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.AbstractProduct
+namespace DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct
 {
     interface IMovement
     {

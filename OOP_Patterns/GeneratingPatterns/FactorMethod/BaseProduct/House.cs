@@ -1,4 +1,4 @@
-﻿namespace OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct
+﻿namespace DesignPatterns.GeneratingPatterns.FactorMethod.BaseProduct
 {
     abstract class House
     { 

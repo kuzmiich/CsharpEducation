@@ -1,4 +1,4 @@
-﻿namespace OOP_Paradigms.GeneratingPatterns.Builder.ProductComponent
+﻿namespace DesignPatterns.GeneratingPatterns.Builder.ProductComponent
 {
     class Additive
     {

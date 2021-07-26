@@ -1,6 +1,6 @@
-﻿using OOP_Paradigms.GeneratingPatterns.AbstractFactory.AbstractProduct;
+﻿using DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct;
 
-namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.BaseFactory
+namespace DesignPatterns.GeneratingPatterns.AbstractFactory.BaseFactory
 {
     abstract class HeroFactory
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OOP_Paradigms.GeneratingPatterns.Singleton
+namespace DesignPatterns.GeneratingPatterns.Singleton
 {
     class LaunchSingleton : ILaunchPattern
     {

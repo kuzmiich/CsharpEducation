@@ -1,11 +1,11 @@
-﻿using OOP_Paradigms.GeneratingPatterns.Builder.ConcreteProduct.VariousBreadBuilder;
-using OOP_Paradigms.GeneratingPatterns.Builder.Creator;
-using OOP_Paradigms.GeneratingPatterns.Builder.Product;
-using OOP_Paradigms.GeneratingPatterns.Builder.ProductBuilder;
-using OOP_Paradigms.GeneratingPatterns.Builder.ProductBuilder.VariousBreadBuilder;
-using System;
+﻿using System;
+using DesignPatterns.GeneratingPatterns.Builder.ConcreteProduct.VariousBreadBuilder;
+using DesignPatterns.GeneratingPatterns.Builder.Creator;
+using DesignPatterns.GeneratingPatterns.Builder.Product;
+using DesignPatterns.GeneratingPatterns.Builder.ProductBuilder;
+using DesignPatterns.GeneratingPatterns.Builder.ProductBuilder.VariousBreadBuilder;
 
-namespace OOP_Paradigms.GeneratingPatterns.Builder
+namespace DesignPatterns.GeneratingPatterns.Builder
 {
     class LaunchBuilder : ILaunchPattern
     {

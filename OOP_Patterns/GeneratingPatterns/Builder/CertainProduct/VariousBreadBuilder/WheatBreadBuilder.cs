@@ -1,8 +1,8 @@
-﻿using OOP_Paradigms.GeneratingPatterns.Builder.ProductBuilder;
-using OOP_Paradigms.GeneratingPatterns.Builder.ProductComponent;
-using System;
+﻿using System;
+using DesignPatterns.GeneratingPatterns.Builder.ProductBuilder;
+using DesignPatterns.GeneratingPatterns.Builder.ProductComponent;
 
-namespace OOP_Paradigms.GeneratingPatterns.Builder.ConcreteProduct.VariousBreadBuilder
+namespace DesignPatterns.GeneratingPatterns.Builder.ConcreteProduct.VariousBreadBuilder
 {
     class WheatBreadBuilder : BreadBuilder
     {

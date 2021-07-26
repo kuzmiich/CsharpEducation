@@ -1,6 +1,6 @@
-﻿using OOP_Paradigms.PatternsOfBehavior.Strategy.CarState;
+﻿using DesignPatterns.PatternsOfBehavior.Strategy.CarState;
 
-namespace OOP_Paradigms.PatternsOfBehavior.Strategy.BaseCar
+namespace DesignPatterns.PatternsOfBehavior.Strategy.BaseCar
 {
     class Car
     {

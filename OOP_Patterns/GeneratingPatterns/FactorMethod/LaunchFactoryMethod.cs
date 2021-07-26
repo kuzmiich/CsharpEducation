@@ -1,9 +1,9 @@
-﻿using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseCreator;
-using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct;
-using OOP_Paradigms.GeneratingPatterns.FactorMethod.CreateArea;
-using System;
+﻿using System;
+using DesignPatterns.GeneratingPatterns.FactorMethod.BaseCreator;
+using DesignPatterns.GeneratingPatterns.FactorMethod.BaseProduct;
+using DesignPatterns.GeneratingPatterns.FactorMethod.CreateArea;
 
-namespace OOP_Paradigms.GeneratingPatterns.FactorMethod
+namespace DesignPatterns.GeneratingPatterns.FactorMethod
 {
     class LaunchFactoryMethod : ILaunchPattern
     {

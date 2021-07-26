@@ -1,9 +1,9 @@
-﻿using OOP_Paradigms.GeneratingPatterns.AbstractFactory.Client;
-using OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteFactory;
-using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct;
+﻿using DesignPatterns.GeneratingPatterns.FactorMethod.BaseProduct;
 using System;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.Client;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteFactory;
 
-namespace OOP_Paradigms.GeneratingPatterns.FactorMethod
+namespace DesignPatterns.GeneratingPatterns.FactorMethod
 {
     class LaunchAbstractFactory : ILaunchPattern
     {

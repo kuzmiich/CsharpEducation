@@ -1,7 +1,7 @@
-﻿using OOP_Paradigms.GeneratingPatterns.Builder.Product;
-using OOP_Paradigms.GeneratingPatterns.Builder.ProductBuilder;
+﻿using DesignPatterns.GeneratingPatterns.Builder.Product;
+using DesignPatterns.GeneratingPatterns.Builder.ProductBuilder;
 
-namespace OOP_Paradigms.GeneratingPatterns.Builder.Creator
+namespace DesignPatterns.GeneratingPatterns.Builder.Creator
 {
     class Baker
     {

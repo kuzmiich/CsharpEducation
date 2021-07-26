@@ -1,11 +1,11 @@
-﻿using OOP_Paradigms.GeneratingPatterns.AbstractFactory.AbstractProduct;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct;
 
-namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass
+namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass
 {
     class GoMovement : IMovement
     {

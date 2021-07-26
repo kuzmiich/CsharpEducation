@@ -1,4 +1,4 @@
-﻿namespace OOP_Paradigms.PatternsOfBehavior.Strategy.CarState
+﻿namespace DesignPatterns.PatternsOfBehavior.Strategy.CarState
 {
     interface IMovable
     {

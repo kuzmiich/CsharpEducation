@@ -1,4 +1,4 @@
-﻿namespace OOP_Paradigms.GeneratingPatterns.Builder
+﻿namespace DesignPatterns.GeneratingPatterns.Builder
 {
     class Flour
     {

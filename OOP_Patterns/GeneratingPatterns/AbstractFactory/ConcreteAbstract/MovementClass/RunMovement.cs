@@ -1,7 +1,7 @@
-﻿using OOP_Paradigms.GeneratingPatterns.AbstractFactory.AbstractProduct;
-using System;
+﻿using System;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct;
 
-namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass
+namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass
 {
     class RunMovement : IMovement
     {

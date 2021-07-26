@@ -1,13 +1,13 @@
-﻿using OOP_Paradigms.GeneratingPatterns.Builder;
-using OOP_Paradigms.GeneratingPatterns.FactorMethod;
-using OOP_Paradigms.GeneratingPatterns.Prototype;
-using OOP_Paradigms.GeneratingPatterns.Singleton;
-using OOP_Paradigms.PatternsOfBehavior.Strategy;
-using OOP_Patterns.PatternsOfBehavior.Observer;
+﻿using OOP_Patterns.PatternsOfBehavior.Observer;
 using System;
 using System.Text;
+using DesignPatterns.GeneratingPatterns.Builder;
+using DesignPatterns.GeneratingPatterns.FactorMethod;
+using DesignPatterns.GeneratingPatterns.Prototype;
+using DesignPatterns.GeneratingPatterns.Singleton;
+using DesignPatterns.PatternsOfBehavior.Strategy;
 
-namespace OOP_Paradigms
+namespace DesignPatterns
 {
     class Program
     {

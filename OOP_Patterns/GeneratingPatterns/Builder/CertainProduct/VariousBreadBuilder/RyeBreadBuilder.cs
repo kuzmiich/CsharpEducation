@@ -1,6 +1,6 @@
-﻿using OOP_Paradigms.GeneratingPatterns.Builder.ProductComponent;
+﻿using DesignPatterns.GeneratingPatterns.Builder.ProductComponent;
 
-namespace OOP_Paradigms.GeneratingPatterns.Builder.ProductBuilder.VariousBreadBuilder
+namespace DesignPatterns.GeneratingPatterns.Builder.ProductBuilder.VariousBreadBuilder
 {
     class RyeBreadBuilder : BreadBuilder
     {

@@ -1,12 +1,12 @@
-﻿using OOP_Paradigms.GeneratingPatterns.AbstractFactory.AbstractProduct;
-using OOP_Paradigms.GeneratingPatterns.AbstractFactory.BaseFactory;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.BaseFactory;
 
-namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.Client
+namespace DesignPatterns.GeneratingPatterns.AbstractFactory.Client
 {
     class Hero
     {

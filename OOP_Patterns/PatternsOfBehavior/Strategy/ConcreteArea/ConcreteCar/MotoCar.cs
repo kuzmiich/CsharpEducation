@@ -1,7 +1,7 @@
-﻿using OOP_Paradigms.PatternsOfBehavior.Strategy.CarState;
-using System;
+﻿using System;
+using DesignPatterns.PatternsOfBehavior.Strategy.CarState;
 
-namespace OOP_Paradigms.PatternsOfBehavior.Strategy.ConcreteArea.ConcreteCar
+namespace DesignPatterns.PatternsOfBehavior.Strategy.ConcreteArea.ConcreteCar
 {
     class MotoCar : IMovable
     {

@@ -1,7 +1,7 @@
-﻿using OOP_Paradigms.GeneratingPatterns.Prototype.BasePrototype;
-using System;
+﻿using System;
+using DesignPatterns.GeneratingPatterns.Prototype.BasePrototype;
 
-namespace OOP_Paradigms.GeneratingPatterns.Prototype.Figure
+namespace DesignPatterns.GeneratingPatterns.Prototype.Figure
 {
     class Rectangle : IFigure
     {

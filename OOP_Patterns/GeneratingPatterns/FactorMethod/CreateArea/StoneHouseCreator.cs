@@ -1,9 +1,9 @@
 ﻿using System;
-using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseCreator;
-using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct;
-using OOP_Paradigms.GeneratingPatterns.FactorMethod.Products;
+using DesignPatterns.GeneratingPatterns.FactorMethod.BaseCreator;
+using DesignPatterns.GeneratingPatterns.FactorMethod.BaseProduct;
+using DesignPatterns.GeneratingPatterns.FactorMethod.Products;
 
-namespace OOP_Paradigms.GeneratingPatterns.FactorMethod.CreateArea
+namespace DesignPatterns.GeneratingPatterns.FactorMethod.CreateArea
 {
     class StoneHouseCreator : Creator
     {

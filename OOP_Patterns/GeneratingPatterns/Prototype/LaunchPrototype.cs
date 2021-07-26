@@ -1,8 +1,8 @@
-﻿using OOP_Paradigms.GeneratingPatterns.Prototype.BasePrototype;
-using OOP_Paradigms.GeneratingPatterns.Prototype.Figure;
-using System;
+﻿using System;
+using DesignPatterns.GeneratingPatterns.Prototype.BasePrototype;
+using DesignPatterns.GeneratingPatterns.Prototype.Figure;
 
-namespace OOP_Paradigms.GeneratingPatterns.Prototype
+namespace DesignPatterns.GeneratingPatterns.Prototype
 {
     class LaunchPrototype : ILaunchPattern
     {

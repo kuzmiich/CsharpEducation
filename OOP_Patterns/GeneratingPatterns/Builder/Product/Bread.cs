@@ -1,7 +1,7 @@
-﻿using OOP_Paradigms.GeneratingPatterns.Builder.ProductComponent;
-using System.Text;
+﻿using System.Text;
+using DesignPatterns.GeneratingPatterns.Builder.ProductComponent;
 
-namespace OOP_Paradigms.GeneratingPatterns.Builder.Product
+namespace DesignPatterns.GeneratingPatterns.Builder.Product
 {
     class Bread
     {

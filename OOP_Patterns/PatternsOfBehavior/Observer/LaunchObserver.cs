@@ -1,4 +1,4 @@
-﻿using OOP_Paradigms;
+﻿using DesignPatterns;
 using OOP_Patterns.PatternsOfBehavior.Observer.Component;
 using OOP_Patterns.PatternsOfBehavior.Observer.Component.State;
 using OOP_Patterns.PatternsOfBehavior.Observer.UserObservable;

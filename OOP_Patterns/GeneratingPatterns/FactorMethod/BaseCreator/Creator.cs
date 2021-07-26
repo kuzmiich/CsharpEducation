@@ -1,6 +1,6 @@
-﻿using OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseProduct;
+﻿using DesignPatterns.GeneratingPatterns.FactorMethod.BaseProduct;
 
-namespace OOP_Paradigms.GeneratingPatterns.FactorMethod.BaseCreator
+namespace DesignPatterns.GeneratingPatterns.FactorMethod.BaseCreator
 {
     // абстрактный класс строительной компании
     abstract class Creator

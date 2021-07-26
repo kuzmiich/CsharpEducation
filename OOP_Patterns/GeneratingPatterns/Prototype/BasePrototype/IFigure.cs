@@ -1,4 +1,4 @@
-﻿namespace OOP_Paradigms.GeneratingPatterns.Prototype.BasePrototype
+﻿namespace DesignPatterns.GeneratingPatterns.Prototype.BasePrototype
 {
     interface IFigure
     {

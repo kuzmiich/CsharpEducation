@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace OOP_Paradigms
+namespace DesignPatterns
 {
-    interface ILaunchPattern
+    internal interface ILaunchPattern
     {
         void OutPatternInfo();
     }

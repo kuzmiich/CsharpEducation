@@ -1,4 +1,4 @@
-﻿using OOP_Paradigms;
+﻿using DesignPatterns;
 using System;
 
 namespace OOP_Patterns.PatternsOfBehavior.Iterator

@@ -145,6 +145,18 @@ namespace Education
 
             SolidPrinciple.OutSolidPrinciples();
             Console.WriteLine(LINE);
+
+            //Your code goes here
+            String s1 = "abc";
+            String s2 = "cbd";
+            String s3 = "abc";
+            s2 = s3;
+            Console.WriteLine(s1 + " " + s2 + " " + s3 + "\n");
+            
+            Console.Write(s2 == s3 + " ");
+            Console.Write(" " + s1.Equals(s3) + " ");
+            Console.Write(ReferenceEquals(s1, s3) + " ");
+            Console.Write(ReferenceEquals(s2, s3));
         }
         static char[] GetLine(int length, char separator)
         {

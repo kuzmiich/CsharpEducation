@@ -1,6 +1,6 @@
-﻿using OOP_Paradigms.GeneratingPatterns.Builder.Product;
+﻿using DesignPatterns.GeneratingPatterns.Builder.Product;
 
-namespace OOP_Paradigms.GeneratingPatterns.Builder.ProductBuilder
+namespace DesignPatterns.GeneratingPatterns.Builder.ProductBuilder
 {
     abstract class BreadBuilder
     {

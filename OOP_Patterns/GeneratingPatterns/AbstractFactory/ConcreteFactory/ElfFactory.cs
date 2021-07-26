@@ -1,9 +1,9 @@
-﻿using OOP_Paradigms.GeneratingPatterns.AbstractFactory.BaseFactory;
-using OOP_Paradigms.GeneratingPatterns.AbstractFactory.AbstractProduct;
-using OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass;
-using OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteAbstract.WeaponClass;
+﻿using DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.BaseFactory;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteAbstract.WeaponClass;
 
-namespace OOP_Paradigms.GeneratingPatterns.AbstractFactory.ConcreteFactory
+namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteFactory
 {
     // Фабрика создания летящего героя с арбалетом
     class ElfFactory : HeroFactory
