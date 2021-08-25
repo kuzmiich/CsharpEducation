@@ -60,7 +60,7 @@ namespace Education.classes.Advanced.Multithreading
             Thread.EndThreadAffinity(); //
             Thread.MemoryBarrier(); //
 
-            byte[] arr = new byte[] { 1, 2, 3, 4, 5 };
+            var arr = new byte[] { 1, 2, 3, 4, 5 };
             ref byte pArr = ref arr[0];
             Thread.VolatileRead(ref pArr); // 
             Thread.VolatileWrite(ref pArr, 1); //

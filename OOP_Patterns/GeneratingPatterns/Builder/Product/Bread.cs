@@ -3,7 +3,7 @@ using DesignPatterns.GeneratingPatterns.Builder.ProductComponent;
 
 namespace DesignPatterns.GeneratingPatterns.Builder.Product
 {
-    class Bread
+    internal class Bread
     {
         public Bread()
         {
@@ -19,7 +19,8 @@ namespace DesignPatterns.GeneratingPatterns.Builder.Product
         public Flour Flour { get; set; }
         public Salt Salt { get; set; }
         public Additive Additives { get; set; }
-        private StringBuilder _stringBuilder = new StringBuilder();
+        
+        private readonly StringBuilder _stringBuilder = new ();
 
         public override string ToString()
         {

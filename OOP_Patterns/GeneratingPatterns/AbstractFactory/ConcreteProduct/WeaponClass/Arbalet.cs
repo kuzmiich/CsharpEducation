@@ -1,7 +1,7 @@
 ﻿using System;
 using DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct;
 
-namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteAbstract.WeaponClass
+namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteProduct.WeaponClass
 {
     class Arbalet : IWeapon
     {

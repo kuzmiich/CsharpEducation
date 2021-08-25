@@ -4,15 +4,15 @@ namespace DesignPatterns.PatternsOfBehavior.Strategy.BaseCar
 {
     class Car
     {
-        protected int passengersCount; // кол-во пассажиров
-        protected string carModel; // модель автомобиля
+        protected int PassengersCount; // кол-во пассажиров
+        protected string CarModel; // модель автомобиля
 
         public IMovable Movable { private get; set; }
 
         public Car(int count, string model, IMovable movable)
         {
-            passengersCount = count;
-            carModel = model;
+            PassengersCount = count;
+            CarModel = model;
             Movable = movable;
         }
 

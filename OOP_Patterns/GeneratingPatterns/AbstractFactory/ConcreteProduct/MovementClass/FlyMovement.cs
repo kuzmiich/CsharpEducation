@@ -1,7 +1,7 @@
 ﻿using System;
 using DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct;
 
-namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass
+namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteProduct.MovementClass
 {
     class FlyMovement : IMovement
     {

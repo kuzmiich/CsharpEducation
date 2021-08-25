@@ -6,6 +6,8 @@ using DesignPatterns.GeneratingPatterns.FactorMethod;
 using DesignPatterns.GeneratingPatterns.Prototype;
 using DesignPatterns.GeneratingPatterns.Singleton;
 using DesignPatterns.PatternsOfBehavior.Strategy;
+using DesignPatterns.StructuralPatterns.Decorator;
+using DesignPatterns.StructuralPatterns.Facade;
 
 namespace DesignPatterns
 {
@@ -52,6 +54,8 @@ namespace DesignPatterns
                 new LaunchBuilder(),
                 new LaunchStrategy(),
                 new LaunchObserver(),
+                new LaunchDecorator(),
+                new LaunchFacade()
             };
 
             try

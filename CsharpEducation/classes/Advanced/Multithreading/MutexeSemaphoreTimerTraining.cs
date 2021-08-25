@@ -73,7 +73,7 @@ namespace Education.classes.Advanced.Multithreading
         {
             _semaphore = new Semaphore(_minThreadCount, _maxThreadCount);
             _thread = new Thread(Read);
-            _thread.Name = $"Читатель {number.ToString()}";
+            _thread.Name = $"Читатель {number}";
             _thread.Start();
         }
 

@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.GeneratingPatterns.Builder.ProductBuilder
 {
-    abstract class BreadBuilder
+    internal abstract class BreadBuilder
     {
         public Bread Bread { get; set; }
         public abstract void SetSalt();

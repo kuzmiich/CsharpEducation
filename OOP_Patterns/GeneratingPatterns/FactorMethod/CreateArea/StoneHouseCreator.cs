@@ -1,7 +1,7 @@
 ﻿using System;
 using DesignPatterns.GeneratingPatterns.FactorMethod.BaseCreator;
 using DesignPatterns.GeneratingPatterns.FactorMethod.BaseProduct;
-using DesignPatterns.GeneratingPatterns.FactorMethod.Products;
+using DesignPatterns.GeneratingPatterns.FactorMethod.ConcreteProduct;
 
 namespace DesignPatterns.GeneratingPatterns.FactorMethod.CreateArea
 {

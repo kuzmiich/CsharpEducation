@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVP.Model
+namespace MVVM.Model
 {
     public class CalculatorService
     {

@@ -1,13 +1,13 @@
 ﻿using System;
 using DesignPatterns.GeneratingPatterns.FactorMethod.BaseProduct;
 
-namespace DesignPatterns.GeneratingPatterns.FactorMethod.Products
+namespace DesignPatterns.GeneratingPatterns.FactorMethod.ConcreteProduct
 {
     class WoodHouse : House
     {
         public WoodHouse()
         {
-            Console.WriteLine("Деревянный дом построен");
+            Console.WriteLine("Wood house was build");
         }
     }
 }

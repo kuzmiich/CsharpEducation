@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.PatternsOfBehavior.Strategy.CarState
 {
-    interface IMovable
+    internal interface IMovable
     {
         void Move();
     }

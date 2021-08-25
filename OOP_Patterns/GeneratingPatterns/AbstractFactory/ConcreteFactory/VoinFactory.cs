@@ -1,7 +1,7 @@
 ﻿using DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct;
 using DesignPatterns.GeneratingPatterns.AbstractFactory.BaseFactory;
-using DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass;
-using DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteAbstract.WeaponClass;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteProduct.MovementClass;
+using DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteProduct.WeaponClass;
 
 namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteFactory
 {

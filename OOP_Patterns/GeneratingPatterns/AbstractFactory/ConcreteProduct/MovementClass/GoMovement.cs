@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DesignPatterns.GeneratingPatterns.AbstractFactory.AbstractProduct;
 
-namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteAbstract.MovementClass
+namespace DesignPatterns.GeneratingPatterns.AbstractFactory.ConcreteProduct.MovementClass
 {
     class GoMovement : IMovement
     {

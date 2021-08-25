@@ -1,35 +1,34 @@
-﻿using System;
-using MVP;
+﻿using MVP.Model;
 using MVP.View;
-using Console = System.Console;
+using System;
 
 namespace MVP.Presenter
 {
     public class CalculatorPresenter
     {
-        private readonly IView _viewService;
+        private readonly IInputService _inputServiceService;
         private static readonly CalculatorService Model = new ();
 
         public CalculatorPresenter(InputService inputService)
         {
-            _viewService = inputService ?? throw new ArgumentNullException(nameof(inputService));
+            _inputServiceService = inputService ?? throw new ArgumentNullException(nameof(inputService));
         }
 
         public decimal Calculate()
         {
             Console.Write("Input operation type: ");
-            var operationType = _viewService.GetChar(Console.ReadLine());
+            var operationType = Console.ReadLine();
             Console.Write("Input first number: ");
-            var first = _viewService.GetDecimal(Console.ReadLine());
+            var first = _inputServiceService.GetDecimal(Console.ReadLine());
             Console.Write("Input second number: ");
-            var second = _viewService.GetDecimal(Console.ReadLine());
+            var second = _inputServiceService.GetDecimal(Console.ReadLine());
 
             return operationType switch
             {
-                '+' => Model.Sum(first, second),
-                '-' => Model.Subtraction(first, second),
-                '*' => Model.Multiplication(first, second),
-                '/' => Model.Division(first, second),
+                "+" => Model.Sum(first, second),
+                "-" => Model.Subtraction(first, second),
+                "*" => Model.Multiplication(first, second),
+                "/" => Model.Division(first, second),
                 _ => 0m,
             };
         }

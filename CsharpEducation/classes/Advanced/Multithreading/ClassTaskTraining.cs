@@ -67,7 +67,7 @@ namespace Education.classes.Advanced.Multithreading
             Task.WaitAll(taskArray); // ожидаем завершения задач в taskArray
 
             // Если нужно вернуть значение
-            Task<Book> taskBook = new Task<Book>(() =>
+            var taskBook = new Task<Book>(() =>
             {
                 return new Book("Война и мир", "Л. Толстой", 1400);
             });

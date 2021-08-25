@@ -1,5 +1,6 @@
 ﻿using MVC.Controller;
 using System;
+using System.ComponentModel.Design;
 
 namespace MVC
 {
@@ -10,7 +11,7 @@ namespace MVC
             // The user turned to the view
             Console.WriteLine("---------------Welcome to calculator-------------");
             Console.WriteLine("Input operation type (+, -, *, /):");
-            var operation = Convert.ToChar(Console.ReadLine());
+            var operationType = Console.ReadLine();
             Console.Write("Input first number: ");
             var first = Convert.ToDecimal(Console.ReadLine());
             Console.Write("Input second number: ");
@@ -23,12 +24,12 @@ namespace MVC
             // !end
 
             // without using events, the view refers to the model to receive data
-            var calculateResult = operation switch
+            var calculateResult = operationType switch
             {
-                '+' => model.Sum(),
-                '-' => model.Subtraction(),
-                '*' => model.Multiplication(),
-                '/' => model.Division(),
+                "+" => model.Sum(),
+                "-" => model.Subtraction(),
+                "*" => model.Multiplication(),
+                "/" => model.Division(),
                 _ => 0m,
             };
 

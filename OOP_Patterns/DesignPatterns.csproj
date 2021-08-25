@@ -8,7 +8,7 @@
   <ItemGroup>
     <Folder Include="StructuralPatterns\Decorator\" />
     <Folder Include="StructuralPatterns\Adapter\" />
-    <Folder Include="StructuralPatterns\Facede\" />
+    <Folder Include="StructuralPatterns\Facade\" />
     <Folder Include="StructuralPatterns\Composite\" />
     <Folder Include="StructuralPatterns\Deputy\" />
     <Folder Include="StructuralPatterns\Flyweight\" />
