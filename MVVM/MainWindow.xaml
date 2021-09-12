@@ -19,7 +19,7 @@
             <ColumnDefinition Width="180*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox x:Name="TextBlock" HorizontalAlignment="Center" IsReadOnly="True" Text=" " VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"
+        <TextBox x:Name="TextBlock" HorizontalAlignment="Center" IsReadOnly="True" Text="" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"
                  VerticalAlignment="Center" Grid.ColumnSpan="2" MinHeight="30" MinWidth="376" Height="53" Width="356"/>
 
         <Label x:Name="Label" Content="Input first number:" HorizontalAlignment="Center" VerticalAlignment="Center" Width="160" Height="30" Grid.Row="1"/>

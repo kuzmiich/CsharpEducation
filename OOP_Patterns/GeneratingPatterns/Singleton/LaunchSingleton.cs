@@ -9,13 +9,13 @@ namespace DesignPatterns.GeneratingPatterns.Singleton
             Console.WriteLine(
                 "Одиночка (Singleton, Синглтон) - порождающий паттерн, который гарантирует,\n" +
                 "что для определенного класса будет создан только один объект, а также предоставит к этому объекту точку доступа.\n");
-            Computer comp = new Computer();
+            var comp = new Computer();
             comp.Launch("Windows 8.1");
 
             Console.WriteLine(comp.OS.Name);
 
             // Не получится изменить ОС, так как объект уже создан    
-            comp.OS = OS.getInstance("Windows 10");
+            comp.OS = OS.GetInstance("Windows 10");
             Console.WriteLine(comp.OS.Name);
         }
     }

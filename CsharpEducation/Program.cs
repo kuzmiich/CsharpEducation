@@ -14,13 +14,13 @@ namespace Education
     {
         static void Main(string[] args)
         {
-            char[] LINE = GetLine(50, '*');
-            Console.WriteLine(LINE);
+            var line = GetLine(50, '*');
+            Console.WriteLine(line);
             ParamsTraining.OutTask();
 
             TupleTraining.OutTask();
 
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
             StructTraining.OutTask();
 
             // check class library
@@ -30,137 +30,126 @@ namespace Education
 
             ClassLibrary.Logic.Sorting.BubleSort(ref arr);
             // !end
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             IndexerTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             AccessModifier.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             ConstAndReadonlyTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             NullTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             TypeConversionTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             ObjectTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             GeneralizationTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
            
             ExceptionTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             DelegateBasicTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             DelegateUse.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             DelegateAnonymousTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             DelegateEventTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
             
             DelegateCovarianceContravarianceTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             DelegateActionPredicateFunc.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             InterfaceBasicTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             ICloneableTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             IComparableTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             InterfaceCovarianceAndContravariance.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             ExtensionMethodTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             PartialClassAndMethodTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             AnonymousTypeTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             PatternMatchingTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             PatternSwitchTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             RecordsTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             CollectionTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             StringStringBuilderRegexTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             AdditionalClassAndStructure.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             MultithreadingBasicTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             MutexeSemaphoreTimerTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             ClassTaskTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             AsyncTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             LinqTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             ParallelLinqTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             ReflectionTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             DynamicTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             GCTraining.OutTask();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             OOP_PrincipleTraining.OutOOP_Pillars();
-            Console.WriteLine(LINE);
+            Console.WriteLine(line);
 
             SolidPrinciple.OutSolidPrinciples();
-            Console.WriteLine(LINE);
-
-            //Your code goes here
-            String s1 = "abc";
-            String s2 = "cbd";
-            String s3 = "abc";
-            s2 = s3;
-            Console.WriteLine(s1 + " " + s2 + " " + s3 + "\n");
-            
-            Console.Write(s2 == s3 + " ");
-            Console.Write(" " + s1.Equals(s3) + " ");
-            Console.Write(ReferenceEquals(s1, s3) + " ");
-            Console.Write(ReferenceEquals(s2, s3));
+            Console.WriteLine(line);
         }
-        static char[] GetLine(int length, char separator)
+
+        private static char[] GetLine(int length, char separator)
         {
-            char[] line = new char[length];
+            var line = new char[length];
             for (int i = 0; i < length; i++)
             {
                 line[i] = separator;

@@ -12,13 +12,16 @@
             this.Name = name;
         }
 
-        public static OS getInstance(string name)
+        public static OS GetInstance(string name)
         {
             if (instance == null)
             {
                 lock (syncRoot)
                 {
-                    instance = new OS(name);
+                    if (instance == null)
+                    {
+                        instance = new OS(name);
+                    }
                 }
             }
             return instance;

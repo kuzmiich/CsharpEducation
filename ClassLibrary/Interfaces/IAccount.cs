@@ -1,4 +1,4 @@
-﻿namespace ClassLibrary.interfaces
+﻿namespace ClassLibrary.Interfaces
 {
     public interface IAccount
     {

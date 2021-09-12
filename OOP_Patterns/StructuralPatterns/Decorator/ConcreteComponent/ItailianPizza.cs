@@ -6,9 +6,7 @@ namespace DesignPatterns.StructuralPatterns.Decorator.ConcreteComponent
     {
         public ItalianPizza() : base("Italian pizza")
         { }
-        public override int GetCost()
-        {
-            return 10;
-        }
+
+        public override int GetCost() => 10;
     }
 }

@@ -6,12 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="StructuralPatterns\Adapter\BaseAdapter" />
     <Folder Include="StructuralPatterns\Decorator\" />
     <Folder Include="StructuralPatterns\Adapter\" />
     <Folder Include="StructuralPatterns\Facade\" />
     <Folder Include="StructuralPatterns\Composite\" />
     <Folder Include="StructuralPatterns\Deputy\" />
     <Folder Include="StructuralPatterns\Flyweight\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
 
 </Project>

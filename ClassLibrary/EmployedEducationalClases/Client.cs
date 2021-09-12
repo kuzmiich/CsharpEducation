@@ -1,4 +1,4 @@
-﻿using ClassLibrary.interfaces;
+﻿using ClassLibrary.Interfaces;
 using System;
 
 namespace ClassLibrary.EmployedEducationalClases

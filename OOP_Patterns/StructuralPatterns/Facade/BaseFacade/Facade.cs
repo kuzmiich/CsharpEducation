@@ -26,10 +26,10 @@ namespace DesignPatterns.StructuralPatterns.Facade.BaseFacade
         {
             var result = "Facade initializes subsystems:\n";
             result += Subsystem1.operation1();
-            result += Subsystem2.operation1();
+            result += Subsystem2.Operation1();
             result += "Facade orders subsystems to perform the action:\n";
             result += Subsystem1.operationN();
-            result += Subsystem2.operationZ();
+            result += Subsystem2.OperationZ();
             return result;
         }
     }

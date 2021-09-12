@@ -1,6 +1,6 @@
 ﻿using OOP_Patterns.PatternsOfBehavior.Observer;
 using System;
-using System.Text;
+using DesignPatterns.FluentBuilder;
 using DesignPatterns.GeneratingPatterns.Builder;
 using DesignPatterns.GeneratingPatterns.FactorMethod;
 using DesignPatterns.GeneratingPatterns.Prototype;
@@ -47,7 +47,7 @@ namespace DesignPatterns
 
             ILaunchPattern[] patternArray =
             {
-                new LaunchFactoryMethod(),
+                /*new LaunchFactoryMethod(),
                 new LaunchAbstractFactory(),
                 new LaunchSingleton(),
                 new LaunchPrototype(),
@@ -55,7 +55,9 @@ namespace DesignPatterns
                 new LaunchStrategy(),
                 new LaunchObserver(),
                 new LaunchDecorator(),
-                new LaunchFacade()
+                new LaunchFacade(),
+                new LaunchFluentBuilder(),*/
+                new LaunchFluentBuilder()
             };
 
             try

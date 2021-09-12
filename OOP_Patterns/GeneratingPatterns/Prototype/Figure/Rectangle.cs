@@ -5,8 +5,8 @@ namespace DesignPatterns.GeneratingPatterns.Prototype.Figure
 {
     class Rectangle : IFigure
     {
-        private int _width;
-        private int _height;
+        private readonly int _width;
+        private readonly int _height;
         public Rectangle(int width, int height)
         {
             _width = width;
@@ -15,7 +15,7 @@ namespace DesignPatterns.GeneratingPatterns.Prototype.Figure
 
         public IFigure Clone()
         {
-            return new Rectangle(this._width, this._height);
+            return new Rectangle(_width, this._height);
         }
         public void GetInfo()
         {
