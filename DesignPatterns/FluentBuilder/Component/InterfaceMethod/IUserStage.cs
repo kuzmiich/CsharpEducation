@@ -2,6 +2,6 @@
 {
     public interface IUserStage
     {
-        IPasswordStage AsUser(int userId);
+        IPasswordStage AsUser(int? userId);
     }
 }

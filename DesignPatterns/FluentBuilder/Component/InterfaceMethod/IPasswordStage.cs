@@ -2,6 +2,6 @@
 {
     public interface IPasswordStage
     {
-        IConnectionInitializerStage WithPassword(int password);
+        IConnectionInitializerStage WithPassword(int? password);
     }
 }

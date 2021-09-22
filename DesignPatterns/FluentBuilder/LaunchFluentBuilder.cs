@@ -7,6 +7,20 @@ namespace DesignPatterns.FluentBuilder
     {
         public void OutPatternInfo()
         {
+            var connectionSingleton = SingletonSqlConnection.CreateConnection()
+                .ForServer("database")
+                .ForDatabase("server")
+                .AsUser()
+                .WithPassword()
+                .Connection();
+            
+            var connectionDynamic = new DynamicSqlConnection()
+                .ForServer("database")
+                .ForDatabase("server")
+                .AsUser(1)
+                .WithPassword(12345678)
+                .Connection();
+            
             var connectionInitializer = InterfaceSqlConnection
                 .CreateConnection(config =>
                 {
